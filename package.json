@@ -1,0 +1,27 @@
+{
+  "name": "blue-canary-cs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "lessc css/main.less css/main.css",
+    "watch:css": "onchange 'css/**/*.less' -- npm run build:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulnicholsen27/blue-canary-cs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/paulnicholsen27/blue-canary-cs/issues"
+  },
+  "homepage": "https://github.com/paulnicholsen27/blue-canary-cs#readme",
+  "devDependencies": {
+    "less": "^4.5.1",
+    "onchange": "^7.1.0"
+  }
+}
