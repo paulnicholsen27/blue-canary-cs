@@ -664,9 +664,9 @@
     font-weight: 700;
     text-align: center;
     margin: 0;
-    color: #fff;
+    color: #1a1a1a;
     padding: 0 2rem;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     overflow: hidden;
     display: inline-block;
     position: relative;
@@ -674,6 +674,7 @@
     /* prevents padding from adding to the width */
     box-sizing: border-box;
     transition: color 0.3s;
+    border-radius: 0.25rem;
   }
   #cs-navigation .cs-button-solid:before {
     content: '';
