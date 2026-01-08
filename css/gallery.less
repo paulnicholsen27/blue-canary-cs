@@ -80,12 +80,13 @@
         .cs-gallery-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            gap: (20/16rem);
         }
 
         .cs-gallery-item {
             flex: 0 0 100%;
             min-width: 0;
+            box-sizing: border-box;
+            padding: 0 (10/16rem);
         }
 
         .cs-gallery-picture {
@@ -211,10 +212,6 @@
     #gallery-1430 {
         .cs-gallery-picture {
             height: (350/16rem);
-        }
-
-        .cs-gallery-track {
-            gap: (24/16rem);
         }
     }
 }
