@@ -6,7 +6,7 @@
 @media only screen and (min-width: 0rem) {
     #footer-1390 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--bodyTextColor);
         position: relative;
         z-index: 1;
 
@@ -26,9 +26,9 @@
             padding-bottom: clamp(1.5rem, 5vw, 4rem);
             border-bottom: 1px solid #484848;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             /* 24px - 40px */
             gap: clamp(1.25rem, 4vw, 2.5rem);
         }
@@ -39,7 +39,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             row-gap: (8/16rem);
             /* 24px - 36px */
             column-gap: clamp(1.5rem, 4vw, 2.25rem);
@@ -65,10 +65,11 @@
         }
 
         .cs-logo {
-            width: 100%;
-            max-width: (209/16rem);
+            width: auto;
+            max-width: (300/16rem);
             height: auto;
             display: block;
+            flex-shrink: 0;
         }
 
         .cs-logo-img {
@@ -156,7 +157,7 @@
 @media only screen and (min-width: 48rem) {
     #footer-1390 {
         .cs-top {
-            align-items: flex-start;
+            align-items: center;
         }
 
         .cs-bottom {
