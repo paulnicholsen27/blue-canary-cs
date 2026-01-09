@@ -24,6 +24,13 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
+  /* Slightly larger base text on small screens */
+  @media only screen and (max-width: 37.5rem) {
+    :root {
+      --bodyFontSize: 1.0625rem;
+    }
+  }
+
 /* cinzel-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
