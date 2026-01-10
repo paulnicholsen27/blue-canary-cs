@@ -61,6 +61,19 @@
                 botField.value = '';
             }
 
+            // If Netlify reCAPTCHA is enabled, ensure we have a token before submitting.
+            var recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]');
+            if (recaptchaResponse && typeof recaptchaResponse.value === 'string') {
+                if (recaptchaResponse.value.trim() === '') {
+                    hideStatus();
+                    if (errorEl) {
+                        errorEl.textContent = 'Please complete the reCAPTCHA and try again.';
+                        errorEl.hidden = false;
+                    }
+                    return;
+                }
+            }
+
             var formData = new FormData(form);
             var postUrl = form.getAttribute('action') || window.location.pathname || '/';
 
@@ -76,6 +89,13 @@
 
                     // Clear the form and show the success message.
                     form.reset();
+                    try {
+                        if (window.grecaptcha && typeof window.grecaptcha.reset === 'function') {
+                            window.grecaptcha.reset();
+                        }
+                    } catch (e2) {
+                        // ignore
+                    }
                     if (successEl) {
                         successEl.textContent = "We'll be in touch soon!";
                         successEl.hidden = false;

@@ -390,7 +390,7 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 </div>
             </div>
             <!-- Form -->
-            <form id="cs-form-490" name="Contact Form" method="post" data-netlify="true" netlify-honeypot="bot-field">
+            <form id="cs-form-490" name="Contact Form" method="post" action="/" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="Contact Form">
                 <p hidden>
                     <label>
@@ -417,6 +417,7 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                     Message
                     <textarea class="cs-input" required name="message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
                 </label>
+                <div class="cs-recaptcha" data-netlify-recaptcha="true"></div>
                 <p class="cs-form-success" id="cs-form-490-success" role="status" aria-live="polite" hidden></p>
                 <p class="cs-form-error" id="cs-form-490-error" role="status" aria-live="polite" hidden></p>
                 <button class="cs-button-solid" type="submit">Submit Message Now</button>
