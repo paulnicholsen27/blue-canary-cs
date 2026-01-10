@@ -56,7 +56,7 @@
             }
 
             var formData = new FormData(form);
-            var postUrl = form.getAttribute('action') || window.location.pathname || '/';
+            var postUrl = '/';
 
             hideStatus();
 
@@ -66,7 +66,7 @@
                 body: encodeFormData(formData)
             })
                 .then(function (res) {
-                    if (!res.ok) throw new Error('Non-2xx response');
+                    if (!res.ok) throw new Error('Non-2xx response: ' + res.status);
 
                     // Clear the form and show the success message.
                     form.reset();
@@ -75,7 +75,12 @@
                         successEl.hidden = false;
                     }
                 })
-                .catch(function () {
+                .catch(function (err) {
+                    try {
+                        console.error('Netlify form submission failed:', err);
+                    } catch (e2) {
+                        // ignore
+                    }
                     if (errorEl) {
                         errorEl.textContent = 'Something went wrong, please email us at info@bluecanarywebdesign.com';
                         errorEl.hidden = false;
