@@ -55,6 +55,12 @@
                 return;
             }
 
+            // Prevent autofill/password managers from accidentally tripping the honeypot.
+            var botField = form.querySelector('[name="bot-field"]');
+            if (botField && typeof botField.value === 'string') {
+                botField.value = '';
+            }
+
             var formData = new FormData(form);
             var postUrl = form.getAttribute('action') || window.location.pathname || '/';
 
