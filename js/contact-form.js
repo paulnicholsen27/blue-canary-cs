@@ -55,12 +55,6 @@
                 return;
             }
 
-            // Prevent autofill/password managers from accidentally tripping the honeypot.
-            var botField = form.querySelector('[name="bot-field"]');
-            if (botField && typeof botField.value === 'string') {
-                botField.value = '';
-            }
-
             // If Netlify reCAPTCHA is enabled, ensure we have a token before submitting.
             var recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]');
             if (recaptchaResponse && typeof recaptchaResponse.value === 'string') {
