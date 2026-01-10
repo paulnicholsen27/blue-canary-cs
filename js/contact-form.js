@@ -42,10 +42,11 @@
             hideError();
         }
 
-        // Hide the success message as soon as the user starts editing again.
-        ['input', 'change'].forEach(function (evtName) {
-            form.addEventListener(evtName, hideStatus, { passive: true });
-        });
+        // Hide status only on clear user edit intent.
+        // Password managers can fire input/change events that would otherwise
+        // immediately hide the success message after submission.
+        form.addEventListener('keydown', hideStatus);
+        form.addEventListener('paste', hideStatus);
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
