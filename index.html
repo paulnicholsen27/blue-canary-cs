@@ -390,18 +390,24 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 </div>
             </div>
             <!-- Form -->
-            <form id="cs-form-490" name="Contact Form" method="post">
+            <form id="cs-form-490" name="Contact Form" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="Contact Form">
+                <p hidden>
+                    <label>
+                        Don’t fill this out if you’re human: <input name="bot-field">
+                    </label>
+                </p>
                 <label class="cs-label">
                     Name
-                    <input class="cs-input" required type="text" id="name-490" name="name" placeholder="John/Jane Doe">
+                    <input class="cs-input" required type="text" id="name-490" name="name" autocomplete="name" placeholder="John/Jane Doe">
                 </label>
                 <label class="cs-label">
                     Email
-                    <input class="cs-input" required type="text" id="email-490" name="email" placeholder="name@company.com">
+                    <input class="cs-input" required type="email" id="email-490" name="email" autocomplete="email" placeholder="name@company.com">
                 </label>
                 <label class="cs-label">
                     Phone
-                    <input class="cs-input" required type="text" id="phone-490" name="phone" placeholder="+1 (206) 987-6543">
+                    <input class="cs-input" required type="tel" id="phone-490" name="phone" autocomplete="tel" placeholder="+1 (206) 987-6543">
                 </label>
                 <label class="cs-label">
                     How Did You Find Us
@@ -409,8 +415,10 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 </label>
                 <label class="cs-label-message">
                     Message
-                    <textarea class="cs-input" required name="Message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
+                    <textarea class="cs-input" required name="message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
                 </label>
+                <p class="cs-form-success" id="cs-form-490-success" role="status" aria-live="polite" hidden></p>
+                <p class="cs-form-error" id="cs-form-490-error" role="status" aria-live="polite" hidden></p>
                 <button class="cs-button-solid" type="submit">Submit Message Now</button>
             </form>
         </div>
@@ -481,7 +489,8 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
 <!-- ============================================ -->
 <!--                 End Footer                   -->
 <!-- ============================================ -->
-	<script src="js/navigation.js"></script>
-	<script src="js/gallery.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/contact-form.js"></script>
 	</body>
 </html>
