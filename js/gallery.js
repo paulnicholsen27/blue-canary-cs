@@ -57,7 +57,7 @@ class GallerySlider {
         // prepend clones of last N
         for (let i = this.totalSlides - cloneCount; i < this.totalSlides; i++) {
             const clone = this.originalItems[i].cloneNode(true);
-            clone.setAttribute('aria-hidden', 'true');
+            // clone.setAttribute('aria-hidden', 'true');
             clone.classList.add('cs-clone');
             this.track.insertBefore(clone, this.track.firstChild);
         }
@@ -65,7 +65,7 @@ class GallerySlider {
         // append clones of first N
         for (let i = 0; i < cloneCount; i++) {
             const clone = this.originalItems[i].cloneNode(true);
-            clone.setAttribute('aria-hidden', 'true');
+            // clone.setAttribute('aria-hidden', 'true');
             clone.classList.add('cs-clone');
             this.track.appendChild(clone);
         }
