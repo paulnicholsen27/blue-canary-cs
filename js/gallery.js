@@ -192,6 +192,15 @@ class GallerySlider {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    new GallerySlider('#gallery-1430');
-});
+(function initWhenReady() {
+    const init = () => {
+        new GallerySlider('#gallery-1430');
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+        return;
+    }
+
+    init();
+})();

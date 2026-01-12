@@ -1,8 +1,43 @@
 (function () {
     'use strict';
 
+    var RECAPTCHA_SRC = 'https://www.google.com/recaptcha/api.js';
+    var recaptchaLoadPromise = null;
+
     function getEl(id) {
         return document.getElementById(id);
+    }
+
+    function ensureRecaptchaLoaded() {
+        if (window.grecaptcha) return Promise.resolve();
+        if (recaptchaLoadPromise) return recaptchaLoadPromise;
+
+        recaptchaLoadPromise = new Promise(function (resolve, reject) {
+            var existing = document.querySelector('script[src^="' + RECAPTCHA_SRC + '"]');
+            if (existing) {
+                existing.addEventListener('load', function () {
+                    resolve();
+                }, { once: true });
+                existing.addEventListener('error', function () {
+                    reject(new Error('reCAPTCHA failed to load'));
+                }, { once: true });
+                return;
+            }
+
+            var script = document.createElement('script');
+            script.src = RECAPTCHA_SRC;
+            script.async = true;
+            script.defer = true;
+            script.onload = function () {
+                resolve();
+            };
+            script.onerror = function () {
+                reject(new Error('reCAPTCHA failed to load'));
+            };
+            document.head.appendChild(script);
+        });
+
+        return recaptchaLoadPromise;
     }
 
     function encodeFormData(formData) {
@@ -13,7 +48,7 @@
         return params.toString();
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         var form = getEl('cs-form-490');
         if (!form) return;
 
@@ -24,6 +59,40 @@
         var messageInput = getEl('message-490');
         var successEl = getEl('cs-form-490-success');
         var errorEl = getEl('cs-form-490-error');
+
+        void nameInput;
+        void emailInput;
+        void phoneInput;
+        void findInput;
+        void messageInput;
+
+        var recaptchaKicked = false;
+        function kickRecaptchaLoad() {
+            if (recaptchaKicked) return;
+            recaptchaKicked = true;
+            ensureRecaptchaLoaded().catch(function () {
+                // If it fails, we'll show a message on submit.
+            });
+        }
+
+        // Start loading reCAPTCHA when the user is likely to use the form.
+        form.addEventListener('focusin', kickRecaptchaLoad);
+        form.addEventListener('pointerdown', kickRecaptchaLoad);
+        form.addEventListener('touchstart', kickRecaptchaLoad, { passive: true });
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        kickRecaptchaLoad();
+                        observer.disconnect();
+                    });
+                },
+                { root: null, rootMargin: '300px', threshold: 0 }
+            );
+            observer.observe(form);
+        }
 
         function hideSuccess() {
             if (!successEl) return;
@@ -57,9 +126,15 @@
             }
 
             // If Netlify reCAPTCHA is enabled, ensure we have a token before submitting.
-            var recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]');
-            if (recaptchaResponse && typeof recaptchaResponse.value === 'string') {
-                if (recaptchaResponse.value.trim() === '') {
+            // The hidden response field may not exist until the reCAPTCHA script loads.
+            var recaptchaEnabled =
+                form.hasAttribute('data-netlify-recaptcha') ||
+                !!form.querySelector('[data-netlify-recaptcha]');
+
+            if (recaptchaEnabled) {
+                kickRecaptchaLoad();
+                var recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]');
+                if (!recaptchaResponse || typeof recaptchaResponse.value !== 'string' || recaptchaResponse.value.trim() === '') {
                     hideStatus();
                     if (errorEl) {
                         errorEl.textContent = 'Please complete the reCAPTCHA and try again.';
@@ -103,5 +178,11 @@
                     }
                 });
         });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+    } else {
+        init();
+    }
 })();
