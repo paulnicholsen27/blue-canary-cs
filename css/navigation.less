@@ -11,8 +11,22 @@
 
         &.scroll {
             #cs-navigation {
-                /* 53px, same height as the cs-top-container */
-                transform: translateY(-3.3125rem);
+                /* Don't shift the nav upward; shrink in-place instead */
+                transform: none;
+
+                .cs-container {
+                    padding: (12/16rem) (16/16rem);
+                }
+
+                .cs-logo {
+                    height: (64/16rem);
+                    padding: 2px;
+                }
+
+                .cs-toggle {
+                    width: (40/16rem);
+                    height: (40/16rem);
+                }
             }
         }
     }
@@ -146,6 +160,8 @@
             justify-content: flex-end;
             align-items: center;
             position: relative;
+
+            transition: padding .3s;
         }
 
         .cs-logo {
@@ -160,6 +176,8 @@
             align-items: center;
             order: 1;
             z-index: 10;
+
+            transition: height .3s;
 
             img {
                 width: auto;
@@ -182,7 +200,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: transform .6s;
+            transition: transform .6s, width .3s, height .3s;
 
             &.cs-active {
                 transform: rotate(180deg);
@@ -577,8 +595,21 @@
 @media only screen and (min-width: 64rem) {
     body.scroll {
         #cs-navigation {
-            /* 53px, the ssme height as the cs-top-container */
-            transform: translateY(-3.3125rem);
+            /* Don't shift the nav upward; shrink in-place instead */
+            transform: none;
+
+            .cs-logo {
+                height: (56/16rem);
+                padding: 4px;
+
+                img {
+                    padding: 0;
+                }
+            }
+
+            .cs-li {
+                padding: (16/16rem) 0;
+            }
         }
     }
 
@@ -713,12 +744,16 @@
             align-items: center;
             z-index: 100;
 
+            transition: height .3s, padding .3s;
+
             img {
                 width: auto;
                 height: 100%;
                 /* ensures the image never overflows the container. It stays contained within its width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
                 padding: 5px 0;
+
+                transition: padding .3s;
             }
         }
 
@@ -737,6 +772,8 @@
             padding: (31/16rem) 0;
             /* prevent flexbox from squishing it */
             flex: none;
+
+            transition: padding .3s;
         }
 
         .cs-li-link {
