@@ -111,11 +111,16 @@
             hideError();
         }
 
-        // Hide status only on clear user edit intent.
+        function hideErrorOnEdit() {
+            // Keep success visible; clear only the error when the user starts editing.
+            hideError();
+        }
+
+        // Clear errors only on clear user edit intent.
         // Password managers can fire input/change events that would otherwise
         // immediately hide the success message after submission.
-        form.addEventListener('keydown', hideStatus);
-        form.addEventListener('paste', hideStatus);
+        form.addEventListener('keydown', hideErrorOnEdit);
+        form.addEventListener('paste', hideErrorOnEdit);
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -147,6 +152,7 @@
             var formData = new FormData(form);
             var postUrl = form.getAttribute('action') || window.location.pathname || '/';
 
+            // New submit attempt: clear any previous status.
             hideStatus();
 
             fetch(postUrl, {
