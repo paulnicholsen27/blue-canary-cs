@@ -194,7 +194,7 @@ class GallerySlider {
 
 (function initWhenReady() {
     const init = () => {
-        new GallerySlider('#gallery-1430');
+        new GallerySlider('#gallery');
     };
 
     if (document.readyState === 'loading') {
