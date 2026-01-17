@@ -26,12 +26,19 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
-  /* Slightly larger base text on small screens */
-  @media only screen and (max-width: 37.5rem) {
-    :root {
-      --bodyFontSize: 1.125rem;
-    }
+/* Mobile readability: increase text sizes without changing rem-based layout math */
+@media only screen and (max-width: 37.5rem) {
+  :root {
+    --bodyFontSize: 1.125rem;
+    /* Keep headings readable without dominating the viewport */
+    --headerFontSize: clamp(2.0625rem, 7vw, 3.0625rem);
+    --topperFontSize: clamp(0.875rem, 3vw, 1rem);
   }
+
+  .cs-text {
+    line-height: 1.6em;
+  }
+}
 
 /* cinzel-regular - latin */
 @font-face {
