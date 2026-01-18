@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Blue Canary Web Design builds fast, accessible websites and SEO-focused copywriting for small businesses. Schedule a free consultation." />
         <link rel="canonical" href="https://www.bluecanarywebdesign.com/" />
+
+        <!-- LCP (Hero) image: preload + high fetch priority -->
+        <link rel="preload" as="image" href="assets/images/hero-background-m.webp" media="(max-width: 600px)" type="image/webp" fetchpriority="high" />
+        <link rel="preload" as="image" href="assets/images/hero-background-t.webp" media="(min-width: 601px) and (max-width: 1023px)" type="image/webp" fetchpriority="high" />
+        <link rel="preload" as="image" href="assets/images/hero-background-d.webp" media="(min-width: 1024px)" type="image/webp" fetchpriority="high" />
+
 		<link rel="stylesheet" href="css/main.css" />
         <link rel="dns-prefetch" href="//www.google.com" />
         <link rel="dns-prefetch" href="//www.gstatic.com" />
@@ -165,7 +171,7 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 <source media="(min-width: 1024px)" srcset="assets/images/hero-background-d.webp">
                 <source media="(min-width: 601px)" srcset="assets/images/hero-background-t.webp">
                 <source media="(max-width: 600px)" srcset="assets/images/hero-background-m.webp">
-                <img aria-hidden="true" decoding="async" src="assets/images/hero-background-d.webp" alt="hands typing on laptop" width="275" height="132">
+				<img aria-hidden="true" decoding="async" loading="eager" fetchpriority="high" src="assets/images/hero-background-d.webp" alt="hands typing on laptop" width="275" height="132">
             </picture>
         </section>
                            
