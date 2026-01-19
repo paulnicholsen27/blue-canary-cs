@@ -66,19 +66,25 @@
         void findInput;
         void messageInput;
 
-        var recaptchaKicked = false;
-        function kickRecaptchaLoad() {
-            if (recaptchaKicked) return;
-            recaptchaKicked = true;
-            ensureRecaptchaLoaded().catch(function () {
-                // If it fails, we'll show a message on submit.
-            });
-        }
+        var recaptchaEnabled =
+            form.hasAttribute('data-netlify-recaptcha') ||
+            !!form.querySelector('[data-netlify-recaptcha]');
 
-        // Start loading reCAPTCHA when the user is likely to use the form.
-        form.addEventListener('focusin', kickRecaptchaLoad);
-        form.addEventListener('pointerdown', kickRecaptchaLoad);
-        form.addEventListener('touchstart', kickRecaptchaLoad, { passive: true });
+        if (recaptchaEnabled) {
+            var recaptchaKicked = false;
+            function kickRecaptchaLoad() {
+                if (recaptchaKicked) return;
+                recaptchaKicked = true;
+                ensureRecaptchaLoaded().catch(function () {
+                    // If it fails, we'll show a message on submit.
+                });
+            }
+
+            // Start loading reCAPTCHA when the user is likely to use the form.
+            form.addEventListener('focusin', kickRecaptchaLoad);
+            form.addEventListener('pointerdown', kickRecaptchaLoad);
+            form.addEventListener('touchstart', kickRecaptchaLoad, { passive: true });
+        }
 
         function hideSuccess() {
             if (!successEl) return;
@@ -118,11 +124,9 @@
 
             // If Netlify reCAPTCHA is enabled, ensure we have a token before submitting.
             // The hidden response field may not exist until the reCAPTCHA script loads.
-            var recaptchaEnabled =
-                form.hasAttribute('data-netlify-recaptcha') ||
-                !!form.querySelector('[data-netlify-recaptcha]');
-
             if (recaptchaEnabled) {
+                // If the form is configured for reCAPTCHA, make sure it has loaded.
+                // This function only exists when recaptchaEnabled is true.
                 kickRecaptchaLoad();
                 var recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]');
                 if (!recaptchaResponse || typeof recaptchaResponse.value !== 'string' || recaptchaResponse.value.trim() === '') {
