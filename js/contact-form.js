@@ -80,20 +80,6 @@
         form.addEventListener('pointerdown', kickRecaptchaLoad);
         form.addEventListener('touchstart', kickRecaptchaLoad, { passive: true });
 
-        if ('IntersectionObserver' in window) {
-            var observer = new IntersectionObserver(
-                function (entries) {
-                    entries.forEach(function (entry) {
-                        if (!entry.isIntersecting) return;
-                        kickRecaptchaLoad();
-                        observer.disconnect();
-                    });
-                },
-                { root: null, rootMargin: '300px', threshold: 0 }
-            );
-            observer.observe(form);
-        }
-
         function hideSuccess() {
             if (!successEl) return;
             successEl.hidden = true;
