@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: Blog
+description: Articles and updates from Blue Canary Web Design.
+permalink: blog/index.html
+---
+
+<h1 class="cs-title">Blog</h1>
+<p class="cs-text">Articles and updates from Blue Canary Web Design.</p>
+
+<ul style="list-style: none; padding: 0; margin: 2rem 0; display: grid; gap: 1.25rem;">
+  {%- for post in collections.post | reverse -%}
+    <li style="padding: 1.25rem; border: 1px solid rgba(0,0,0,0.08); border-radius: 0.5rem; background: rgba(255,255,255,0.9);">
+      <h2 class="cs-title" style="font-size: clamp(1.25rem, 3vw, 1.75rem); margin-bottom: 0.5rem;">
+        <a href="/{{ post.url }}" style="color: inherit; text-decoration: none;">{{ post.data.title }}</a>
+      </h2>
+      {% if post.data.date %}<p class="cs-text" style="margin: 0 0 0.5rem 0;"><time datetime="{{ post.data.date | dateToRfc3339 }}">{{ post.data.date | readableDate }}</time></p>{% endif %}
+      {% if post.data.description %}<p class="cs-text" style="margin: 0;">{{ post.data.description }}</p>{% endif %}
+    </li>
+  {%- endfor -%}
+</ul>
+
+<p class="cs-text"><a href="/feed.xml">RSS feed</a></p>

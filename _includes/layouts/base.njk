@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if description %}<meta name="description" content="{{ description | escape }}" />{% endif %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/favicon-512x512.png">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="{{ site.name | escape }}" />
+    <meta property="og:title" content="{{ title | escape }}" />
+    {% if description %}<meta property="og:description" content="{{ description | escape }}" />{% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  </head>
+  <body>
+    {% include "partials/nav.njk" %}
+
+    <main id="main">
+      <section style="padding: var(--sectionPadding);">
+        <div class="cs-container">
+          {{ content | safe }}
+        </div>
+      </section>
+    </main>
+
+    {% include "partials/footer.njk" %}
+  </body>
+</html>

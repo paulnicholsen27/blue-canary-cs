@@ -1,0 +1,21 @@
+---
+permalink: feed.xml
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.name | escape }} Blog</title>
+    <link>{{ site.url }}/blog/</link>
+    <description>{{ site.description | escape }}</description>
+    {% for post in collections.post | reverse %}
+    <item>
+      <title>{{ post.data.title | escape }}</title>
+      <link>{{ site.url }}/{{ post.url }}</link>
+      <guid>{{ site.url }}/{{ post.url }}</guid>
+      <pubDate>{{ post.date.toUTCString() }}</pubDate>
+      {% if post.data.description %}<description>{{ post.data.description | escape }}</description>{% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

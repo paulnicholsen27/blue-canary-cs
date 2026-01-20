@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:css": "lessc --plugin=less-plugin-clean-css css/main.less css/main.css",
+    "build:site": "eleventy",
+    "build": "npm run build:css && npm run build:site",
+    "dev": "eleventy --serve --watch",
     "watch:css": "onchange 'css/**/*.less' -- npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +24,8 @@
   },
   "homepage": "https://github.com/paulnicholsen27/blue-canary-cs#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "less": "^4.5.1",
     "less-plugin-clean-css": "^1.6.0",
     "onchange": "^7.1.0"

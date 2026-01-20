@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+
+<h1 class="cs-title">{{ title }}</h1>
+{% if date %}
+  <p class="cs-text"><time datetime="{{ date | dateToRfc3339 }}">{{ date | readableDate }}</time></p>
+{% endif %}
+
+<div class="cs-text">
+  {{ content | safe }}
+</div>
