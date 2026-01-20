@@ -27,7 +27,7 @@ function errorPage(provider, message) {
   return html(`<!doctype html><html><body>
 <script>
   (function () {
-    var msg = ${JSON.stringify('authorization:' + provider + ':error:') } + JSON.stringify({ error: ${JSON.stringify(safe)} });
+    var msg = ${JSON.stringify('authorization:' + provider + ':error:')} + JSON.stringify({ error: ${JSON.stringify(safe)} });
     if (window.opener && window.opener.postMessage) {
       window.opener.postMessage(msg, '*');
       window.close();
@@ -85,24 +85,28 @@ exports.handler = async function handler(event) {
   }
 
   try {
+    const tokenBody = new URLSearchParams();
+    tokenBody.set('client_id', clientId);
+    tokenBody.set('client_secret', clientSecret);
+    tokenBody.set('code', code);
+    tokenBody.set('redirect_uri', functionUrl);
+    tokenBody.set('state', returnedState);
+
     const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: JSON.stringify({
-        client_id: clientId,
-        client_secret: clientSecret,
-        code,
-        redirect_uri: functionUrl,
-        state: returnedState
-      })
+      body: tokenBody.toString()
     });
 
-    const tokenJson = await tokenRes.json();
-    if (!tokenRes.ok || !tokenJson.access_token) {
-      return errorPage(provider, tokenJson.error_description || tokenJson.error || 'Failed to obtain access token');
+    const tokenJson = await tokenRes.json().catch(() => null);
+    if (!tokenRes.ok || !tokenJson || !tokenJson.access_token) {
+      const msg =
+        (tokenJson && (tokenJson.error_description || tokenJson.error)) ||
+        `Failed to obtain access token (HTTP ${tokenRes.status})`;
+      return errorPage(provider, msg);
     }
 
     const accessToken = tokenJson.access_token;
