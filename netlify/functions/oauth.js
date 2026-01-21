@@ -67,12 +67,14 @@ exports.handler = async function handler(event) {
   // Step 1: start the OAuth flow
   if (!code) {
     const state = crypto.randomBytes(16).toString('hex');
+    const requestedScope = params.get('scope');
+    const scope = requestedScope ? requestedScope : 'public_repo';
 
     const authorizeUrl = new URL('https://github.com/login/oauth/authorize');
     authorizeUrl.searchParams.set('client_id', clientId);
     authorizeUrl.searchParams.set('redirect_uri', functionUrl);
     authorizeUrl.searchParams.set('state', state);
-    authorizeUrl.searchParams.set('scope', 'public_repo');
+    authorizeUrl.searchParams.set('scope', scope);
 
     return {
       statusCode: 302,

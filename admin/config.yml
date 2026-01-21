@@ -5,7 +5,9 @@ backend:
   name: github
   repo: paulnicholsen27/blue-canary-cs
   branch: production
-  auth_endpoint: https://www.bluecanarywebdesign.com/.netlify/functions/oauth
+  api_root: https://api.github.com
+  base_url: https://www.bluecanarywebdesign.com
+  auth_endpoint: /.netlify/functions/oauth
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
