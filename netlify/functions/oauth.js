@@ -44,13 +44,19 @@ exports.handler = async function handler(event) {
 
   const clientId = process.env.GITHUB_CLIENT_ID;
   const clientSecret = process.env.GITHUB_CLIENT_SECRET;
-  const siteUrl = process.env.URL || 'https://www.bluecanarywebdesign.com';
+  const headers = (event && event.headers) || {};
+  const host = headers.host || headers.Host;
+  const forwardedProto = headers['x-forwarded-proto'] || headers['X-Forwarded-Proto'];
+  const proto = (Array.isArray(forwardedProto) ? forwardedProto[0] : forwardedProto) || 'https';
+  const siteUrl = host
+    ? `${proto}://${host}`
+    : process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://www.bluecanarywebdesign.com';
 
   if (!clientId || !clientSecret) {
     return errorPage(provider, 'Missing server env vars GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET');
   }
 
-  const cookies = parseCookies(event.headers && (event.headers.cookie || event.headers.Cookie));
+  const cookies = parseCookies(headers.cookie || headers.Cookie);
 
   const params = new URLSearchParams(event.queryStringParameters || {});
   const code = params.get('code');
