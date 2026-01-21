@@ -1,8 +1,11 @@
+site_url: https://www.bluecanarywebdesign.com
+display_url: https://www.bluecanarywebdesign.com
+
 backend:
   name: github
   repo: paulnicholsen27/blue-canary-cs
   branch: production
-  auth_endpoint: /.netlify/functions/oauth
+  auth_endpoint: https://www.bluecanarywebdesign.com/.netlify/functions/oauth
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
