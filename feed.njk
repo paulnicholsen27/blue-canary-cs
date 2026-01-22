@@ -11,8 +11,8 @@ layout: null
     {% for post in collections.post | reverse %}
     <item>
       <title>{{ post.data.title | escape }}</title>
-      <link>{{ site.url }}/{{ post.url }}</link>
-      <guid>{{ site.url }}/{{ post.url }}</guid>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ post.url }}</guid>
       <pubDate>{{ post.date.toUTCString() }}</pubDate>
       {% if post.data.description %}<description>{{ post.data.description | escape }}</description>{% endif %}
     </item>
