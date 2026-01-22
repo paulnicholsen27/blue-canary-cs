@@ -2,9 +2,9 @@
 title: Welcome to Blue Canary Web Design
 date: 2026-01-22
 ---
-### Introducing Blue Canary Web Design: Websites That Actually Work 
+### Introducing Blue Canary Web Design: Websites That Actually Work
 
-![blue canary logo](/assets/images/uploads/horiz_rt_fulllogo_transparent.png)
+![blue canary logo](/assets/images/uploads/horiz_rt_fulllogo_transparent_nobuffer.png)
 
 Let’s start with an uncomfortable truth.
 A lot of small business websites are not doing their jobs.
@@ -29,6 +29,8 @@ We build sites that:
 * Are easy for real humans to navigate
 * Are structured to help search engines understand your business
 * Grow with you instead of needing a rebuild every year
+
+  ![screenshot of page speed showing 100 in all categories](/assets/images/uploads/pagespeed.png "Results from https://pagespeed.web.dev")
 
 We also believe that doing good business matters. Blue Canary proudly offers discounted rates to organizations that support democracy, equality, and kindness. Small choices add up, and this is one way we try to make ours count.
 
