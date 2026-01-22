@@ -15,10 +15,7 @@ That problem is exactly why **Blue Canary Web Design** exists.
 
 I started Blue Canary because I’ve spent years building, fixing, and redesigning websites and keep seeing the same thing over and over again. Smart people with good businesses using websites that were holding them back instead of helping them grow.
 
-Blue Canary Web Design focuses on **clear, fast, accessible websites for small businesses**. No bloated features you do not need. No confusing jargon. No disappearing after launch. Just thoughtful design, clean code, and ongoing support when you need it.
-
-And yes, we are intentionally small.
-That is not a limitation. It is the point.
+Blue Canary Web Design focuses on **clear, fast, accessible websites for small businesses**. No bloated features you don't need. No confusing jargon. No disappearing after launch. Just thoughtful design, clean code, and ongoing support when you need it.
 
 When you work with Blue Canary, you are not handed off to a ticketing system or a rotating cast of developers. You work directly with me. I pay attention. I learn how your business actually works. I notice the details that matter, because the details are what make a website effective.
 
