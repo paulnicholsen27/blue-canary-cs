@@ -2,11 +2,23 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="cs-title">{{ title }}</h1>
-{% if date %}
-  <p class="cs-text"><time datetime="{{ date | dateToRfc3339 }}">{{ date | readableDate }}</time></p>
-{% endif %}
+<article id="blog-post">
+  <nav class="cs-blog-breadcrumb" aria-label="Breadcrumb">
+    <a class="cs-blog-breadcrumb-link" href="/blog/">Blog</a>
+  </nav>
 
-<div class="cs-text">
-  {{ content | safe }}
-</div>
+  <header class="cs-blog-header">
+    <h1 class="cs-title">{{ title }}</h1>
+    {% if date %}
+      <p class="cs-blog-meta"><time datetime="{{ date | dateToRfc3339 }}">{{ date | readableDate }}</time></p>
+    {% endif %}
+  </header>
+
+  <div class="cs-blog-prose">
+    {{ content | safe }}
+  </div>
+
+  <footer class="cs-blog-post-footer">
+    <a class="cs-blog-back" href="/blog/">Back to all posts</a>
+  </footer>
+</article>
