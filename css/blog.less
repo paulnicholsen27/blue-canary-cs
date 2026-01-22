@@ -273,6 +273,16 @@
 
 #blog-post .cs-blog-post-footer {
     margin-top: clamp(2rem, 5vw, 3rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+#blog-post .cs-blog-cta-wrapper {
+    margin-top: clamp(1.5rem, 4vw, 2.25rem);
+    display: flex;
+    justify-content: center;
 }
 
 #blog-post .cs-blog-back {
@@ -284,4 +294,43 @@
 
 #blog-post .cs-blog-back:hover {
     text-decoration: underline;
+}
+
+#blog-post .cs-blog-cta {
+    font-size: 1rem;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: color 0.3s;
+}
+
+#blog-post .cs-blog-cta:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+}
+
+#blog-post .cs-blog-cta:hover {
+    color: #fff;
+}
+
+#blog-post .cs-blog-cta:hover:before {
+    width: 100%;
 }
