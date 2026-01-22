@@ -154,7 +154,13 @@
 }
 
 #blog-post .cs-blog-header {
+    max-width: 72rem;
+    margin: 0 auto;
     margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+#blog-post .cs-blog-header h1 {
+    max-width: 72rem;
 }
 
 #blog-post .cs-blog-meta {
@@ -165,7 +171,9 @@
 
 #blog-post .cs-blog-prose {
     width: 100%;
-    max-width: 45rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    font-size: clamp(1.0625rem, 0.35vw + 1rem, 1.1875rem);
 }
 
 /* Prose typography */
@@ -176,6 +184,7 @@
 #blog-post .cs-blog-prose p {
     margin: 0 0 1rem 0;
     color: var(--bodyTextColor);
+    font-size: inherit;
     line-height: 1.7em;
 }
 
@@ -203,6 +212,7 @@
 
 #blog-post .cs-blog-prose li {
     margin: 0.35rem 0;
+    font-size: inherit;
 }
 
 #blog-post .cs-blog-prose a {
@@ -255,9 +265,9 @@
 
 #blog-post .cs-blog-prose img {
     display: block;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
     padding: 1.5rem 0;
 }
 

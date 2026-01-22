@@ -3,6 +3,11 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin);
 
+  // Rebuild when generated CSS changes (e.g. from lessc watcher)
+  eleventyConfig.addWatchTarget('./css/main.css');
+  eleventyConfig.addWatchTarget('./css/**/*.less');
+  eleventyConfig.addWatchTarget('./css/**/*.css');
+
   // Copy existing static assets
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('css');
