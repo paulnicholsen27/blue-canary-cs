@@ -16,69 +16,33 @@ Today, their site scores 100/100 on Google PageSpeed, loads instantly, and works
 
 Here’s how we made it happen.
 
-The Challenge: A Website Holding Them Back
+**The Challenge: A Website Holding Them Back**
 
 Before the redesign, District Scholars faced several problems:
 
-Slow page load times
+* Slow page load times
+* Poor mobile experience
+* Low accessibility scores
+* Inconsistent layout across devices
+* SEO limitations
 
-Poor mobile experience
+These issues made it harder for visitors to engage, register, and trust the brand. In today’s digital landscape, that’s a serious disadvantage.
 
-Low accessibility scores
-
-Inconsistent layout across devices
-
-SEO limitations
-
-These issues made it harder for visitors to engage, register, and trust the brand.
-
-In today’s digital landscape, that’s a serious disadvantage.
-
-Our Solution: Performance-First Web Design
+**Our Solution: Performance-First Web Design**
 
 We approached this project with one goal:
 
-Build a website that is fast, accessible, and built to convert.
+*Build a website that is fast, accessible, and built to convert.*
 
 Our redesign focused on:
 
-⚡ Speed Optimization
+* Speed Optimization
+* Mobile-First Responsiveness
+* Fully responsive layout
+* Accessibility Improvements
+* SEO Best Practices
 
-Image compression
-
-Clean, lightweight code
-
-Modern asset loading
-
-Reduced script overhead
-
-📱 Mobile-First Responsiveness
-
-Fully responsive layout
-
-Optimized navigation
-
-Touch-friendly design
-
-♿ Accessibility Improvements
-
-Proper heading structure
-
-Improved contrast ratios
-
-Keyboard navigation support
-
-Screen reader compatibility
-
-🔍 SEO Best Practices
-
-Optimized metadata
-
-Semantic HTML
-
-Improved crawlability
-
-Results: From Struggling Site to Perfect Scores
+**Results: From Struggling Site to Perfect Scores**
 
 After launch, the results were immediate.
 
@@ -87,70 +51,34 @@ Google PageSpeed Performance
 Desktop Score: 100/100
 Mobile Score: 100/100
 
-📸 Screenshot Placeholder (Desktop)
-
-\[Insert Screenshot: Desktop PageSpeed Score Here]
-
-📸 Screenshot Placeholder (Mobile)
-
-\[Insert Screenshot: Mobile PageSpeed Score Here]
-
-Measurable Improvements
-
-🚀 Page load time reduced by over 60%
-
-📈 Improved user engagement
-
-📱 100% mobile compatibility
-
-♿ WCAG-aligned accessibility
-
-🔍 Stronger SEO foundation
+![page speed test of districtscholars.com showing perfect rankings](/assets/images/uploads/district_scholars_pagespeed_after.png)
 
 These improvements help District Scholars reach more students, retain more visitors, and build long-term credibility.
 
-Why Website Performance Matters for Your Business
+**Why Website Performance Matters for Your Business**
 
 Google uses site speed and usability as ranking factors.
 
-But more importantly, users do too.
+But more importantly, users do too!
 
-Studies show:
+Studies show 40% of users leave if a site takes more than 3 seconds to load.  You've been there: no one wants to sit and wait for a website to load.  It's a fact: faster sites convert better, which means more money in your pocket.
 
-40% of users leave if a site takes more than 3 seconds to load
+Accessible sites reach more customers.  Not only is it profitable, it's the right thing to do.  Don't we want everyone accessing our sites, regardless of their unique challenges?  (And depending on your jurisdiction, failing to make your site accessible could open you up to legal issues!)
 
-Faster sites convert better
+Your website is your first impression.  Make sure it's a good one.
 
-Accessible sites reach more customers
-
-Mobile-friendly sites rank higher
-
-Your website is often your first impression.
-
-It needs to be a good one.
-
-About Blue Canary Web Design
+**About Blue Canary Web Design**
 
 At Blue Canary Web Design, we specialize in:
 
-High-performance websites
+* High-performance websites
+* SEO-focused development
+* Accessibility compliance
+* Small business web solutions
 
-SEO-focused development
+We don’t just make sites look good: we make them work. Learn more about our services: https://www.bluecanarywebdesign.com/#services
 
-Accessibility compliance
-
-Small business web solutions
-
-Custom WordPress and static sites
-
-We don’t just make sites look good.
-
-We make them work.
-
-👉 Learn more about our services:
-https://yourdomain.com/services
-
-Ready to Upgrade Your Website?
+**Ready to Upgrade Your Website?**
 
 If your website is:
 
@@ -166,12 +94,8 @@ Not ranking well
 
 Let’s fix that.
 
-👉 Get a Free Website Audit
+Contact Us
 
-https://yourdomain.com/free-audit
-
-👉 Contact Us
-
-https://yourdomain.com/contact
+https://www.bluecanarywebdesign.com/#contact
 
 We’ll show you exactly what’s holding your site back and how to improve it.
