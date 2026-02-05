@@ -76,7 +76,7 @@ At Blue Canary Web Design, we specialize in:
 * Accessibility compliance
 * Small business web solutions
 
-We don’t just make sites look good: we make them work. Learn more about our services: https://www.bluecanarywebdesign.com/#services
+We don’t just make sites look good: we make them work. [Learn more about our services](https://www.bluecanarywebdesign.com/#services).
 
 **Ready to Upgrade Your Website?**
 
@@ -94,8 +94,6 @@ Not ranking well
 
 Let’s fix that.
 
-Contact Us
-
-https://www.bluecanarywebdesign.com/#contact
+[Contact Us](https://www.bluecanarywebdesign.com/#contact)
 
 We’ll show you exactly what’s holding your site back and how to improve it.
