@@ -1,5 +1,7 @@
 ---
 title: Welcome to Blue Canary Web Design
+description: "Websites that actually work: fast, accessible, and built to grow with your business."
+shareImage: /assets/logos/vert_rt_fulllogo.png
 date: 2026-01-22
 ---
 ### Introducing Blue Canary Web Design: Websites That Actually Work

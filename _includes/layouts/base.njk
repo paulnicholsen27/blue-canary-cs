@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% set ogTypeValue = ogType or 'website' %}
+    {% set shareImageValue = shareImage or site.defaultShareImage %}
+    {% if shareImageValue %}
+      {% set shareImageUrl = site.url + shareImageValue %}
+    {% endif %}
+
     <title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,11 +21,21 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/favicon-512x512.png">
 
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="{{ ogTypeValue }}" />
     <meta property="og:site_name" content="{{ site.name | escape }}" />
     <meta property="og:title" content="{{ title | escape }}" />
     {% if description %}<meta property="og:description" content="{{ description | escape }}" />{% endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+    {% if shareImageUrl %}
+      <meta property="og:image" content="{{ shareImageUrl }}" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="{{ shareImageUrl }}" />
+    {% else %}
+      <meta name="twitter:card" content="summary" />
+    {% endif %}
+    <meta name="twitter:title" content="{{ title | escape }}" />
+    {% if description %}<meta name="twitter:description" content="{{ description | escape }}" />{% endif %}
   </head>
   <body>
     {% include "partials/nav.njk" %}
