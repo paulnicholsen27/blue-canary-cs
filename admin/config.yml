@@ -13,7 +13,6 @@ backend:
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
-publish_mode: simple
 
 collections:
   - name: "posts"
