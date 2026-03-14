@@ -36,7 +36,7 @@ This matters because users often abandon sites that take more than three seconds
 
 After optimization, the site achieved a **100 PageSpeed score**, dramatically improving performance and user experience.
 
-![page speed score showing 100% in performance, accessibility, best practices and SEO](/assets/images/uploads/district_scholars_pagespeed_after.png "100% baby!")
+![page speed score showing 100% in performance, accessibility, best practices and SEO](/assets/images/uploads/withinreach_pagespeed_after.png "100% baby!")
 
 ### Step 3: Designing for Conversion
 
