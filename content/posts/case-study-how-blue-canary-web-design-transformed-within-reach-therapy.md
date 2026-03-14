@@ -1,5 +1,6 @@
 ---
 title: "Case Study: How Blue Canary Web Design Transformed Within Reach Therapy"
+description: See how Blue Canary helped a therapy practice revamp their online image!
 shareImage: /assets/images/uploads/withinreach_homepage.png
 date: 2026-03-14
 tags: []
