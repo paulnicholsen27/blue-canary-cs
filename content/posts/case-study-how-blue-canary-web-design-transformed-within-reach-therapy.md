@@ -8,7 +8,7 @@ tags: []
 ---
 ## Case Study: How Blue Canary Web Design Transformed Within Reach Therapy
 
-When the team at **[Within Reach Therapy](www.withinreachtherapy.com)** approached us, their website had an important job: help people who are struggling find support quickly and comfortably. The practice offers services including anxiety therapy, trauma therapy, depression treatment, LGBTQ+ affirming therapy, and financial therapy, all delivered through online sessions for clients across multiple states. 
+When the team at **[Within Reach Therapy](http://www.withinreachtherapy.com)** approached us, their website had an important job: help people who are struggling find support quickly and comfortably. The practice offers services including anxiety therapy, trauma therapy, depression treatment, LGBTQ+ affirming therapy, and financial therapy, all delivered through online sessions for clients across multiple states. 
 
 But their website... had some issues.
 
