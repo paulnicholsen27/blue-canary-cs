@@ -4,6 +4,7 @@ title: How We Took District Scholars to a Perfect 100 PageSpeed Score (And Why
 description: See how Blue Canary Web Design transformed District Scholars with
   faster load times, full mobile responsiveness, and accessibility improvements,
   achieving perfect PageSpeed scores.
+shareImage: /assets/images/uploads/district_scholars_pagespeed_after.png
 date: 2026-02-05
 ---
 Slow websites lose visitors. Confusing layouts lose customers. And inaccessible sites lose opportunities.
