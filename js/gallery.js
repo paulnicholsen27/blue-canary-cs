@@ -46,7 +46,8 @@ class GallerySlider {
 
     getItemsPerView() {
         const width = window.innerWidth;
-        if (width < 600) return 1;
+        // Keep mobile (<800px) as a single-slide view to match CSS breakpoints.
+        if (width < 800) return 1;
         if (width < 1024) return 2;
         return 3;
     }

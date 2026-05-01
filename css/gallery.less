@@ -98,7 +98,8 @@
 
         .cs-gallery-picture {
             width: 100%;
-            height: (250/16rem);
+            height: auto;
+            aspect-ratio: 3 / 2;
             display: block;
             position: relative;
             overflow: hidden;
@@ -244,13 +245,9 @@
     }
 }
 
-/* Tablet - 600px */
-@media only screen and (min-width: 37.5rem) {
+/* Tablet - 800px */
+@media only screen and (min-width: 50rem) {
     #gallery {
-        .cs-gallery-picture {
-            height: (300/16rem);
-        }
-
         .cs-prev,
         .cs-next {
             display: flex;
@@ -267,7 +264,7 @@
     #gallery {
         .cs-gallery-picture {
             height: auto;
-            aspect-ratio: 2850 / 1554;
+            aspect-ratio: 3 / 2;
         }
     }
 }
