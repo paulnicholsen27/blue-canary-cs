@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "lessc --plugin=less-plugin-clean-css css/main.less css/main.css",
     "build:site": "eleventy",
-    "build": "npm run build:css && npm run build:site",
+    "build": "rm -rf dist && npm run build:css && npm run build:site",
     "dev": "eleventy --serve --watch",
     "watch:css": "onchange 'css/**/*.less' -- npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"

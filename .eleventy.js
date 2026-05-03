@@ -13,7 +13,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('js');
   eleventyConfig.addPassthroughCopy('robots.txt');
-  eleventyConfig.addPassthroughCopy('sitemap.xml');
 
   // Decap CMS
   eleventyConfig.addPassthroughCopy('admin');
