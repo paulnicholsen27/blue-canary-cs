@@ -1,0 +1,25 @@
+---
+permalink: sitemap.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all -%}
+  {%- if item.url
+    and item.outputPath
+    and item.outputPath.endsWith('.html')
+    and item.url != '/sitemap.xml'
+    and item.url != '/feed.xml'
+    and not item.url.startsWith('/admin/')
+    and not item.url.startsWith('/assets/')
+    and not item.url.startsWith('/css/')
+    and not item.url.startsWith('/js/')
+  -%}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ item.date | dateToRfc3339 }}</lastmod>
+  </url>
+  {%- endif -%}
+{%- endfor -%}
+</urlset>
