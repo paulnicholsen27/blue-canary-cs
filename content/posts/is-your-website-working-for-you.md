@@ -1,5 +1,7 @@
 ---
 title: Is Your Website Working for You?
+description: Websites can either help you or hurt you.  Check out our tips for
+  making sure your website is bringing in customers, not turning them away.
 shareImage: /assets/images/uploads/mike-van-den-bos-jf1eomjlqi0-unsplash.jpg
 date: 2026-05-05
 ---
