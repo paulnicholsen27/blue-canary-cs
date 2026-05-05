@@ -16,7 +16,7 @@ layout: layouts/base.njk
 
   <div class="cs-blog-prose">
     {% if shareImage %}
-      <p><img src="{{ shareImage }}" alt="{{ title | escape }}" loading="lazy" decoding="async"></p>
+      <p><img class="cs-blog-featured-img" src="{{ shareImage }}" alt="{{ title | escape }}" loading="lazy" decoding="async"></p>
     {% endif %}
     {{ content | safe }}
   </div>
