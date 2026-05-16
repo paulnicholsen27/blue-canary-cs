@@ -42,7 +42,7 @@ auth:
 logo:
   src: https://www.bluecanarywebdesign.com/assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp
   show_in_header: true
-  
+
 # Add site links in Decap CMS (optional)
 site_url: https://www.bluecanarywebdesign.com
 
@@ -61,3 +61,6 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+
+publish_mode: editorial_workflow
+show_preview_links: true
