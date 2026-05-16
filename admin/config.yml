@@ -8,8 +8,8 @@
 #   base_url: https://www.bluecanarywebdesign.com
 #   auth_endpoint: /.netlify/functions/oauth
 
-# media_folder: "assets/images/uploads"
-# public_folder: "/assets/images/uploads"
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 # Use DecapBridge PKCE auth (required)
 backend:
