@@ -52,6 +52,7 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
+    preview_path: blog/{{slug}}
     extension: "md"
     format: "frontmatter"
     fields:
