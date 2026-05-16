@@ -39,8 +39,10 @@ auth:
   avatar_url_claim: avatar_url
 
 # Better Decap + Bridge logo (optional)
-logo_url: https://www.bluecanarywebdesign.com/assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp
-
+logo:
+  src: https://www.bluecanarywebdesign.com/assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp
+  show_in_header: true
+  
 # Add site links in Decap CMS (optional)
 site_url: https://www.bluecanarywebdesign.com
 
