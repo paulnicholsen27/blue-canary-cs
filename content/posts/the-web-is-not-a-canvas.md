@@ -20,7 +20,7 @@ Right now the conversation has settled into a familiar shape. On one side you ha
 
 Both groups are right about different things. That's what makes the argument so hard to resolve.
 
-> The question was never "should this be a website or an app." The question was always "what does the person on the other end actually need."
+> The question was never "Should this be a website or an app?" The question was always "*What does the person on the other end actually need?*"
 
 ## How we got here
 
