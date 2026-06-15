@@ -27,7 +27,7 @@ Here's what we've found actually moves the needle.
 
 When someone lands on your homepage for the first time, they're not reading it. They're glancing at it. And within a few seconds they've already decided if they're in the right place.
 
-The single biggest thing that keeps people from sticking around is a vague headline. "Welcome to [Business Name]" tells them nothing. Neither does "Solutions for your success" or any variation of that. What actually works is being specific about who you help and what you do. Something like: *"We build websites for Montreal restaurants that turn first-time visitors into regulars."* That's a headline someone can read and immediately know if it's for them.
+The single biggest thing that keeps people from sticking around is a vague headline. "Welcome to [Business Name]" tells them nothing. Neither does "Solutions for your success" or any variation of that. What actually works is being specific about who you help and what you do. Something like: *"We build websites for family restaurants that turn first-time visitors into regulars."* That's a headline someone can read and immediately know if it's for them.
 
 If your homepage is doing a lot of explaining and not a lot of answering, that's worth fixing before anything else.
 
@@ -89,4 +89,4 @@ None of this is complicated in theory. In practice, it's easy to end up with a s
 
 ---
 
-*Blue Canary Web Design builds websites for small businesses that are meant to actually work. Based in Montreal, serving clients across Canada.*
+*Blue Canary Web Design builds websites for small businesses that are meant to actually work.*
