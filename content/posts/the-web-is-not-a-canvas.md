@@ -1,6 +1,9 @@
 ---
 title: The Web Is Not a Canvas
-description: ""
+description: Is your web stack making your product harder to build? Learn why
+  modern frameworks, single-page apps, and over-engineered front-end
+  architectures can slow teams down, create fragile user experiences, and hide
+  what the web already does well... and what a better approach looks like.
 date: 2026-05-19
 tags:
   - web design
