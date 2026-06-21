@@ -8,7 +8,7 @@
     "build:site": "eleventy",
     "build": "rm -rf dist && npm run build:css && npm run build:site",
     "dev": "eleventy --serve --watch",
-    "watch:css": "onchange 'css/**/*.less' -- npm run build:css",
+    "watch:css": "onchange -a 'css/**/*.less' -- npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

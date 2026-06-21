@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+title: Website Design Portfolio
+description: See recent website projects from Blue Canary Web Design, including small business, therapy practice, and nonprofit organization sites.
+permalink: gallery/index.html
+---
+
+<!-- ============================================ -->
+<!--                   Gallery  #1430             -->
+<!-- ============================================ -->
+
+<section id="gallery">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Work</span>
+            <h1 class="cs-title">Gallery</h1>
+            <p class="cs-text">
+                Explore our portfolio of recent projects and designs.
+            </p>
+        </div>
+        
+        <div class="cs-gallery-wrapper">
+            <button class="cs-gallery-button cs-prev" aria-label="previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <!-- Screenshots should be 1200 X 800 -->
+            <div class="cs-gallery-slider">
+                <div class="cs-gallery-track">
+                    <div class="cs-gallery-item">
+                        <a class="cs-gallery-link" href="https://www.districtscholars.com" target="_blank" rel="noopener">
+                            <picture class="cs-gallery-picture">
+                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="/assets/images/gallery/districtscholars.webp" alt="District Scholars project screenshot" width="600" height="400">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="cs-gallery-item">
+                        <a class="cs-gallery-link" href="https://santopsychotherapy.com/" target="_blank" rel="noopener">
+                            <picture class="cs-gallery-picture">
+                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="/assets/images/gallery/santopsychotherapy.webp" alt="Santo Psychotherapy project screenshot" width="600" height="400">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="cs-gallery-item">
+                        <a class="cs-gallery-link" href="https://paulnicholsen.com" target="_blank" rel="noopener">
+                            <picture class="cs-gallery-picture">
+                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="/assets/images/gallery/paulnicholsen.webp" alt="Paul Nicholsen website screenshot" width="600" height="400">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="cs-gallery-item">
+                        <a class="cs-gallery-link" href="https://www.withinreachtherapy.com/" target="_blank" rel="noopener">
+                            <picture class="cs-gallery-picture">
+                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="/assets/images/gallery/withinreach.webp" alt="Within Reach project screenshot" width="600" height="400">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="cs-gallery-button cs-next" aria-label="next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cs-gallery-dots"></div>
+
+        <div class="cs-gallery-cta">
+            <a href="#contact" class="cs-button-solid">Start Your Project</a>
+        </div>
+    </div>
+</section>
+
+<script defer src="/js/gallery.js"></script>
