@@ -49,39 +49,14 @@
 	</head>
 	<body>
 <!-- ============================================ -->
-<!--                 Navigation 
-https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown                  -->
+<!--                 Navigation                   -->
 <!-- ============================================ -->
 
 <header id="cs-navigation">
-    <div class="cs-top-bar">
-        <!-- <div class="cs-top-container">
-            <div class="cs-top-contact">
-                <a href="" class="cs-top-link">
-                    <img class="cs-link-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/phone-grey.svg" alt="logo" width="16" height="16" aria-hidden="true" decoding="async">
-                    Call us: +84 1985 33 999
-                </a>
-                <a href="" class="cs-top-link">
-                    <img class="cs-link-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock-grey.svg" alt="logo" width="20" height="20" aria-hidden="true" decoding="async">
-                    Opening hours: Mon - Sat: 8:00am To 9:00pm
-                </a>
-            </div>
-            <div class="cs-top-social">
-                <a href="" class="cs-social-link">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/face-grey.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-                <a href="" class="cs-social-link">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twit-grey.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-                <a href="" class="cs-social-link">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/insta-grey.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-            </div>
-        </div> -->
-    </div>
+    <div class="cs-top-bar"></div>
     <div class="cs-container">
         <!--Nav Logo-->
-        <a href="#" class="cs-logo" aria-label="back to home">
+        <a href="/" class="cs-logo" aria-label="back to home">
             <img src="assets/logos/horiz_rt_fulllogo_transparent_nobuffer_sm.webp" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
@@ -94,66 +69,30 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                     <span class="cs-line cs-line3" aria-hidden="true"></span>
                 </div>
             </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="#" class="cs-li-link cs-active">
-                            Home
-                        </a>
-                    </li>
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                    <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
-                            <a href="#services" class="cs-li-link">
-                                Services
-                            </a>
-                            <!-- <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chev-down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true"> -->
-                        </span>
-                        <!-- <ul class="cs-drop-ul">
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Housing</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Food Banks</a>
-                            </li>
-                        </ul> -->
+                        <a href="/" class="cs-li-link cs-active">Home</a>
                     </li>
                     <li class="cs-li">
-                        <a href="#about" class="cs-li-link">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="cs-li">
-                        <a href="#gallery" class="cs-li-link">
-                            Gallery
-                        </a>
+                        <a href="/services/" class="cs-li-link">Services</a>
                     </li>
                     <li class="cs-li">
-                        <a href="/blog/" class="cs-li-link">
-                            Blog
-                        </a>
+                        <a href="/about/" class="cs-li-link">About</a>
                     </li>
                     <li class="cs-li">
-                        <a href="#pricing" class="cs-li-link">
-                            Pricing
-                        </a>
+                        <a href="/gallery/" class="cs-li-link">Gallery</a>
                     </li>
-                    <!-- <li class="cs-li">
-                        <a href="#contact" class="cs-li-link">
-                            Contact
-                        </a>
-                    </li> -->
+                    <li class="cs-li">
+                        <a href="/blog/" class="cs-li-link">Blog</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/pricing/" class="cs-li-link">Pricing</a>
+                    </li>
                 </ul>
             </div>
         </nav>
         <a href="#contact" class="cs-button-solid cs-nav-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
-        </button> -->
     </div>
 </header>
 <!-- ============================================ -->
@@ -163,14 +102,13 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
 <main id="main">
 
 <!-- ============================================ -->
-<!--                    Hero 
-    https://codestitch.app/app/dashboard/stitches/540 -->
+<!--                    Hero                      -->
 <!-- ============================================ -->
 
         <section id="hero-540">
             <div class="cs-container">
                 <div class="cs-content">
-                    <h3 class="cs-title">A Better Website Starts Here.</h3>
+                    <h1 class="cs-title">A Better Website Starts Here.</h1>
                     <p class="cs-text">
                         Clear design and honest messaging for businesses that care about what they do. 
                     </p>
@@ -187,366 +125,11 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
         </section>
                            
 <!-- ============================================ -->
-<!--                End Hero                 -->
-<!-- ============================================ -->    
-
-
-<!-- ============================================ -->
-<!--                  Services  #942                 -->
-<!-- ============================================ -->
-
-    <section id="services">
-        <div class="cs-container">
-            <!-- Left Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">What We Do</span>
-                <h2 class="cs-title">Web Design Services for Small Businesses</h2>
-                <p class="cs-text">
-                    We provide end-to-end website services for small businesses, combining thoughtful design, clear messaging, and modern development best practices.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp" alt="logo" width="40" height="40">
-                    </picture>
-                    <h3 class="cs-h3">Custom Website Design</h3>
-                    <p class="cs-item-text">
-                        Your website should feel professional, approachable, and easy to use. We create custom designs that prioritize clarity, usability, and a strong first impression for your visitors.
-                    </p>
-                    <!-- <a href="" class="cs-link">Read More</a> -->
-                    <!--Background Image-->
-                    <picture class="cs-background">
-                        <source media="(min-width: 1024px)" srcset="assets/images/service-card-background-d.webp">
-                        <source media="(min-width: 601px)" srcset="assets/images/service-card-background-t.webp">
-                        <source media="(max-width: 600px)" srcset="assets/images/service-card-background-m.webp">
-                        <img loading="lazy" decoding="async" src="assets/images/service-card-background-d.webp" alt="computer screen with code" width="480" height="425">
-                    </picture>
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp" alt="logo" width="40" height="40">
-                    </picture>
-                    <h3 class="cs-h3">SEO-Focused Copywriting</h3>
-                    <p class="cs-item-text">
-                        We write clear, search-optimized website copy that helps your business get found online while still sounding natural and trustworthy. Every word is chosen to support both search engines and real people.
-                    </p>
-                    <!-- <a href="" class="cs-link">Read More</a> -->
-                    <!--Background Image-->
-                    <picture class="cs-background">
-                        <source media="(min-width: 1024px)" srcset="assets/images/service-card-background-d.webp">
-                        <source media="(min-width: 601px)" srcset="assets/images/service-card-background-t.webp">
-                        <source media="(max-width: 600px)" srcset="assets/images/service-card-background-m.webp">
-                        <img loading="lazy" decoding="async" src="assets/images/service-card-background-d.webp" alt="computer screen with code" width="480" height="425">
-                    </picture>
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-icon-wrapper">
-                        <img class="cs-icon" loading="lazy" decoding="async" src="assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp" alt="blue canary logo" width="40" height="40">
-                    </picture>
-                    <h3 class="cs-h3">Fast, Accessible Websites</h3>
-                    <p class="cs-item-text">
-                       Accessibility and performance are built into our process from the start. We focus on clean code, responsive layouts, and thoughtful design choices that improve usability and speed.
-                    </p>
-                    <!-- <a href="" class="cs-link">Read More</a> -->
-                    <!--Background Image-->
-                    <picture class="cs-background">
-                        <source media="(min-width: 1024px)" srcset="assets/images/service-card-background-d.webp">
-                        <source media="(min-width: 601px)" srcset="assets/images/service-card-background-t.webp">
-                        <source media="(max-width: 600px)" srcset="assets/images/service-card-background-m.webp">
-                        <img loading="lazy" decoding="async" src="assets/images/service-card-background-d.webp" alt="computer screen with code" width="480" height="425">
-                    </picture>
-                </li>
-            </ul>
-
-            <div class="cs-services-cta">
-                <a href="#contact" class="cs-button-solid">Schedule a Free Consultation</a>
-            </div>
-        </div>
-
-    </section>
-                       
-<!-- ============================================ -->
-<!--                End Services                 -->
+<!--                End Hero                      -->
 <!-- ============================================ -->    
 
 <!-- ============================================ -->
-<!--                   About 1700                 -->
-<!-- ============================================ -->
-
-<section id="about">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">About Us</span>
-            <h2 class="cs-title">Blue Canary Web Design</h2>
-            <p class="cs-text">
-                Blue Canary Web Design partners with small businesses and organizations across a wide range of industries. Whether you run a local shop, a professional service, or a mission-driven organization, our focus is the same: clear, honest, well-crafted websites that help you grow.
-            </p>
-            <p class="cs-text">
-                We also offer discounted pricing for organizations whose work aligns with values of democracy, equality, and human kindness. This includes groups focused on community impact, inclusion, civic engagement, or social good.
-            </p>
-            <p class="cs-text">
-                Our services include custom website design, redesigns of outdated sites, performance and accessibility improvements, mobile-first layouts, and ongoing support. We take a practical, collaborative approach and aim to build sites that are easy to maintain, fast to load, and effective for real people.
-            </p>
-            <p class="cs-text">
-                Our goal is to be thoughtful about the work we take on, while remaining open, practical, and easy to work with.
-            </p>
-        </div>
-
-        <picture class="cs-picture">
-            <source media="(min-width: 1024px)" srcset="assets/images/about-d.webp">
-            <source media="(min-width: 601px)" srcset="assets/images/about-t.webp">
-            <source media="(max-width: 600px)" srcset="assets/images/about-m.webp">
-            <img loading="lazy" decoding="async" src="assets/images/about-d.webp" alt="silhouette of hands at sunset" width="650" height="890">
-        </picture>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!--                End About                   -->
-<!-- ============================================ -->
-
-<!-- ============================================ -->
-<!--                   Gallery  #1430             -->
-<!-- ============================================ -->
-
-<section id="gallery">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Work</span>
-            <h2 class="cs-title">Gallery</h2>
-            <p class="cs-text">
-                Explore our portfolio of recent projects and designs.
-            </p>
-        </div>
-        
-        <div class="cs-gallery-wrapper">
-            <button class="cs-gallery-button cs-prev" aria-label="previous slide">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <!-- Screenshots should be 1200 X 800 -->
-            <div class="cs-gallery-slider">
-                <div class="cs-gallery-track">
-                    <div class="cs-gallery-item">
-                        <a class="cs-gallery-link" href="https://www.districtscholars.com" target="_blank" rel="noopener">
-                            <picture class="cs-gallery-picture">
-                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="assets/images/gallery/districtscholars.webp" alt="District Scholars project screenshot" width="600" height="400">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="cs-gallery-item">
-                        <a class="cs-gallery-link" href="https://santopsychotherapy.com/" target="_blank" rel="noopener">
-                            <picture class="cs-gallery-picture">
-                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="assets/images/gallery/santopsychotherapy.webp" alt="Santo Psychotherapyproject screenshot" width="600" height="400">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="cs-gallery-item">
-                        <a class="cs-gallery-link" href="https://paulnicholsen.com" target="_blank" rel="noopener">
-                            <picture class="cs-gallery-picture">
-                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="assets/images/gallery/paulnicholsen.webp" alt="Paul Nicholsen website screenshot" width="600" height="400">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="cs-gallery-item">
-                        <a class="cs-gallery-link" href="https://www.withinreachtherapy.com/" target="_blank" rel="noopener">
-                            <picture class="cs-gallery-picture">
-                                <img class="cs-gallery-img" loading="lazy" decoding="async" src="assets/images/gallery/withinreach.webp" alt="Within Reach project screenshot" width="600" height="400">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="cs-gallery-button cs-next" aria-label="next slide">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
-        
-        <div class="cs-gallery-dots"></div>
-
-        <div class="cs-gallery-cta">
-            <a href="#contact" class="cs-button-solid">Start Your Project</a>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!--                 End Gallery                 -->
-<!-- ============================================ -->
-
-<!-- ============================================ -->
-<!--                   Pricing #2421                    -->
-<!-- ============================================ -->
-
-<section id="pricing">
-	<div class="cs-container">
-		<div class="cs-content">
-			<span class="cs-topper">Clear, Simple Pricing</span>
-			<h2 class="cs-title">Affordable Plans for Every Site</h2>
-			<p class="cs-text">We believe in transparent, fair pricing with no hidden fees. Choose the plan that suits your needs whether it’s a one-time build or ongoing service.  <span class="highlight">Ask about our discounts for nonprofits!</span></p>
-		</div>
-		<div class="cs-wrapper">
-			<div class="cs-button-group">
-                <button class="cs-button cs-price-stack" data-filter="one">
-					<picture class="cs-check-wrapper">
-						<img class="cs-check" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="check" height="24" width="24" loading="lazy" decoding="async" aria-hidden="true" />
-					</picture>
-					<div class="cs-flex">
-                        <span class="cs-discount">10% Off</span>
-						<span class="cs-plan">Lump Sum</span>
-					</div>
-					<span class="cs-price">
-						$2700
-						<span class="cs-price-small">+25/mo Hosting</span>
-					</span>
-				</button>
-				<button class="cs-button cs-price-stack" data-filter="two">
-					<picture class="cs-check-wrapper">
-						<img class="cs-check" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="check" height="24" width="24" loading="lazy" decoding="async" aria-hidden="true" />
-					</picture>
-					<div class="cs-flex">
-						<span class="cs-discount">20% Off</span>
-						<span class="cs-plan">Monthly</span>
-					</div>
-					<span class="cs-price">
-						$160
-						<span class="cs-price-small">Per Month</span>
-					</span>
-				</button>
-				<button class="cs-button cs-price-stack" data-filter="three">
-					<picture class="cs-check-wrapper">
-						<img class="cs-check" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="check" height="24" width="24" loading="lazy" decoding="async" aria-hidden="true" />
-					</picture>
-					<div class="cs-flex">
-						<span class="cs-discount">30% Off</span>
-						<span class="cs-plan">ECommerce</span>
-					</div>
-					<span class="cs-price">
-						$7k
-						<span class="cs-price-small">Starting</span>
-					</span>
-				</button>
-			</div>
-			<!--Card 1-->
-			<div class="cs-card" data-category="one">
-				<span class="cs-package">Package Includes:</span>
-				<ul class="cs-ul">
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Design And Development
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						$25/mo Hosting
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						$150 fee Per Page after 5 pages
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						+$75/mo Unlimited Edits Add-on
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						+$250 To Add A Blog
-					</li>
-					<li class="cs-li cs-disabled">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Dedicated Support Specialist
-					</li>
-					<li class="cs-li cs-disabled">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Lifetime Updates
-					</li>
-				</ul>
-                <a href="#contact" class="cs-button-solid">Choose Your Plan</a>
-			</div>
-			<!--Card 2-->
-			<div class="cs-card cs-hidden" data-category="two">
-				<span class="cs-package">Package Includes:</span>
-				<ul class="cs-ul">
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Design And Development
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Includes Hosting
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						$75 fee Per Page After 5 pages
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						+$250 To Add A Blog
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Unlimited Edits
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Dedicated Support Specialist
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Lifetime Updates
-					</li>
-				</ul>
-                <a href="#contact" class="cs-button-solid">Choose Your Plan</a>
-			</div>
-			<!--Card 3-->
-			<div class="cs-card cs-hidden" data-category="three">
-				<span class="cs-package">Package Includes:</span>
-				<ul class="cs-ul">
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Custom Shopify Store
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Configure Any And All Apps
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Integrated Shipping
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Shopify Tutorial Walkthrough
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Fully Editable In Shopify CMS
-					</li>
-					<li class="cs-li">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						+$50/mo Unlimited Edits
-					</li>
-					<li class="cs-li cs-disabled">
-						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
-						Dedicated Support Specialist
-					</li>
-				</ul>
-                <a href="#contact" class="cs-button-solid">Choose Your Plan</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- ============================================ -->
-<!--              End Pricing                     -->
-<!-- ============================================ --> 
-                                
-<!-- ============================================ -->
-<!--                Contact Form #490                 -->
+<!--                Contact Form                  -->
 <!-- ============================================ -->
 
     <section id="contact">
@@ -556,14 +139,9 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 <span class="cs-topper">Contact Us</span>
                 <h2 class="cs-title">Contact Information</h2>
                 <p class="cs-text">
-                    Not sure where to start? That’s okay. Send us a message and we’ll walk through your needs, answer your questions, and help you decide on the right next step.
+                    Not sure where to start? That's okay. Send us a message and we'll walk through your needs, answer your questions, and help you decide on the right next step.
                 </p>
                 
-                <!--Address-->
-                <!-- <span class="cs-header">Address</span>
-                <a href="" class="cs-link">
-                    PO Box 15252 Mill Creek, <br>Washington, USA 98082
-                </a> -->
                 <!--Email-->
                 <span class="cs-header">Email</span>
                 <a href="mailto:info@bluecanarywebdesign.com" class="cs-link">info@bluecanarywebdesign.com</a>
@@ -579,10 +157,6 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                     <a class="cs-social-link" aria-label="visit google profile" href="https://share.google/g54jvOCG7xpoUDWWv">
                         <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
                     </a>
-
-                    <!-- <a class="cs-social-link" aria-label="visit instagram profile" href="">
-                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
-                    </a> -->
                 </div>
             </div>
             <!-- Form -->
@@ -590,7 +164,7 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 <input type="hidden" name="form-name" value="Contact Form">
                 <p hidden>
                     <label>
-                        Don’t fill this out if you’re human:
+                        Don't fill this out if you're human:
                         <input name="bot-field" autocomplete="off" />
                     </label>
                 </p>
@@ -612,7 +186,7 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                 </label>
                 <label class="cs-label-message">
                     Message
-                    <textarea class="cs-input" required name="message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
+                    <textarea class="cs-input" required name="message" id="message-490" placeholder="Hello, I'm interested in..."></textarea>
                 </label>
                 <p class="cs-form-success" id="cs-form-490-success" role="status" aria-live="polite" hidden></p>
                 <p class="cs-form-error" id="cs-form-490-error" role="status" aria-live="polite" hidden></p>
@@ -627,35 +201,39 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
 </main>
  
 <!-- ============================================ -->
-<!--                  Footer  1390                -->
+<!--                  Footer                      -->
 <!-- ============================================ -->
 
 <footer id="footer">
     <div class="cs-container">
         <div class="cs-top">
-
             <ul class="cs-ul">
                 <li class="cs-li">
-                    <a href="#" class="cs-link">Home</a>
-                </li>
-               <li class="cs-li">
-                    <a href="#services" class="cs-link">Services</a>
+                    <a href="/" class="cs-link">Home</a>
                 </li>
                 <li class="cs-li">
-                    <a href="#about" class="cs-link">About</a>
-                </li>
-
-                <li class="cs-li">
-                    <a href="#gallery" class="cs-link">Gallery</a>
+                    <a href="/services/" class="cs-link">Services</a>
                 </li>
                 <li class="cs-li">
-                    <a href="#pricing" class="cs-link">Pricing</a>
+                    <a href="/about/" class="cs-link">About</a>
+                </li>
+                <li class="cs-li">
+                    <a href="/gallery/" class="cs-link">Gallery</a>
+                </li>
+                <li class="cs-li">
+                    <a href="/blog/" class="cs-link">Blog</a>
+                </li>
+                <li class="cs-li">
+                    <a href="/pricing/" class="cs-link">Pricing</a>
                 </li>
                 <li class="cs-li">
                     <a href="#contact" class="cs-link">Contact</a>
                 </li>
+                <li class="cs-li">
+                    <a href="/privacy/" class="cs-link">Privacy Policy</a>
+                </li>
             </ul>
-            <a aria-label="go back to home" class="cs-logo" href="#">
+            <a aria-label="go back to home" class="cs-logo" href="/">
                 <img class="cs-logo-img" loading="lazy" decoding="async" src="assets/logos/horiz_rt_fulllogo_transparent_no_buffer_white_text.webp" alt="logo" width="209" height="40">
             </a>
         </div>
@@ -667,11 +245,6 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
                         <img class="cs-social-icon cs-default" src="assets/images/linkedin.png" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-                <!-- <li class="cs-social-li">
-                    <a href="" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
-                    </a>
-                </li> -->
                 <li class="cs-social-li">
                     <a href="https://share.google/g54jvOCG7xpoUDWWv" class="cs-social-link" aria-label="google" target="_blank" rel="noopener">
                         <img class="cs-social-icon cs-default" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
@@ -681,10 +254,8 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
 
             <span class="cs-copyright">
                 © Copyright <script>document.write(/\d{4}/.exec(Date())[0])</script>
- - <a href="#" class="cs-copyright-link">Blue Canary Web Design LLC</a>
+ - <a href="/" class="cs-copyright-link">Blue Canary Web Design LLC</a>
             </span>
-
-
         </div>
     </div>
 </footer>
@@ -693,47 +264,6 @@ https://codestitch.app/app/dashboard/stitches/1722?nav=Top%20Dropdown           
 <!--                 End Footer                   -->
 <!-- ============================================ -->
     <script defer src="js/navigation.js"></script>
-    <script>
-        (function () {
-            'use strict';
-
-            function loadScriptOnce(src) {
-                if (document.querySelector('script[src="' + src + '"]')) return;
-                var s = document.createElement('script');
-                s.src = src;
-                s.defer = true;
-                document.body.appendChild(s);
-            }
-
-            function observeAndLoad(selector, src, rootMargin) {
-                var el = document.querySelector(selector);
-                if (!el) return;
-
-                if (!('IntersectionObserver' in window)) {
-                    loadScriptOnce(src);
-                    return;
-                }
-
-                var observer = new IntersectionObserver(
-                    function (entries) {
-                        entries.forEach(function (entry) {
-                            if (!entry.isIntersecting) return;
-                            loadScriptOnce(src);
-                            observer.disconnect();
-                        });
-                    },
-                    { root: null, rootMargin: rootMargin || '300px', threshold: 0 }
-                );
-
-                observer.observe(el);
-            }
-
-            // These sections are below the fold; lazy-load their JS to keep them off
-            // the initial critical request chain.
-            observeAndLoad('#gallery', 'js/gallery.js', '400px');
-            observeAndLoad('#contact', 'js/contact-form.js', '400px');
-            observeAndLoad('#pricing', 'js/pricing.js', '400px');
-        })();
-    </script>
+    <script defer src="js/contact-form.js"></script>
 	</body>
 </html>
