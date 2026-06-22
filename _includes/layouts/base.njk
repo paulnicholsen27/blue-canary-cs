@@ -38,10 +38,11 @@
     {% if description %}<meta name="twitter:description" content="{{ description | escape }}" />{% endif %}
     
   </head>
-  <body>
+  {% set pageSlug = page.url | replace("/", "") | replace("/", "-") or "home" %}
+  <body class="page-{{ pageSlug }}{% if bodyClass %} {{ bodyClass }}{% endif %}">
     {% include "partials/nav.njk" %}
 
-    <main id="main">
+    <main id="main"{% if mainClass %} class="{{ mainClass }}"{% endif %}>
       <section class="cs-page-section">
         <div class="cs-container">
           {{ content | safe }}

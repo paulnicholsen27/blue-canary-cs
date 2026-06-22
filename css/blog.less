@@ -1,17 +1,18 @@
 /* Blog index + blog post styles */
 
-/* Generic container + base-layout page section */
-.cs-container {
+/* Base layout pages need room for fixed nav - scoped to pages with blog content */
+body:has(#blog-index) .cs-page-section,
+body:has(#blog-post) .cs-page-section {
+    padding: var(--sectionPadding);
+    padding-top: clamp(8rem, 14vw, 11rem);
+}
+
+body:has(#blog-index) .cs-container,
+body:has(#blog-post) .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
     box-sizing: border-box;
-}
-
-/* Base layout pages (blog) need room for fixed nav */
-.cs-page-section {
-    padding: var(--sectionPadding);
-    padding-top: clamp(8rem, 14vw, 11rem);
 }
 
 /* Shared blog styles */
