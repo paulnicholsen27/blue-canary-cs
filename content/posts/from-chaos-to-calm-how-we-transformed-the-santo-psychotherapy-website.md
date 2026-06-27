@@ -80,7 +80,7 @@ If your website is slow, confusing, or worst of all, saying something you didn't
 
 At Blue Canary Web Design, we specialize in building fast, accessible, clear websites for small businesses and mission-driven organizations. We also offer **discounted rates for nonprofits and organizations doing work that supports democracy, equality, and human kindness** because good web design shouldn't be out of reach for the people doing good work.
 
-Ready to talk about your site? [Schedule a free consultation](https://www.bluecanarywebdesign.com/#contact)... no pressure, no jargon, just an honest conversation about what your website needs.
+Ready to talk about your site? [Schedule a free consultation](https://calendly.com/bluecanarywebdesign/initialconsult)... no pressure, no jargon, just an honest conversation about what your website needs.
 
 ---
 

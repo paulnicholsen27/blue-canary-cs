@@ -106,7 +106,7 @@ A website that handles itself, loads fast, explains who you are, and makes it ea
 
 If yours isn't doing that job, we'd be glad to take a look.
 
-[Schedule a free consultation](https://www.bluecanarywebdesign.com/#contact) and we'll give you an honest read on what your site is doing well and what's worth fixing. No pressure, no jargon.
+[Schedule a free consultation](https://calendly.com/bluecanarywebdesign/initialconsult) and we'll give you an honest read on what your site is doing well and what's worth fixing. No pressure, no jargon.
 
 ---
 
