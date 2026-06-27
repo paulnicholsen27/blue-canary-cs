@@ -293,4 +293,167 @@ body {
         }
     }
 }
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews {
+        padding: var(--sectionPadding);
+        background-color: var(--tertiaryLight);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            max-width: (800/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 0 0 (8/16rem) 0;
+            display: block;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: (24/16rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            max-width: (600/16rem);
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            background-color: #fff;
+            border-radius: (8/16rem);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: (16/16rem);
+        }
+
+        .cs-stars {
+            display: flex;
+            gap: (4/16rem);
+        }
+
+        .cs-star {
+            width: (20/16rem);
+            height: (20/16rem);
+            fill: #F4B942;
+        }
+
+        .cs-review {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cs-review-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.6em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            font-style: italic;
+        }
+
+        .cs-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: (4/16rem);
+        }
+
+        .cs-name {
+            font-size: (18/16rem);
+            font-weight: 700;
+            color: var(--headerColor);
+        }
+
+        .cs-company {
+            font-size: (14/16rem);
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--headerColor);
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .cs-item {
+            max-width: none;
+            flex: 1;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #reviews {
+        .cs-item {
+            padding: clamp(2rem, 4vw, 3rem);
+        }
+
+        .cs-review-text {
+            font-size: (18/16rem);
+        }
+    }
+}
                                 
