@@ -1,277 +1,461 @@
 /*-- -------------------------- -->
-<---          Services          -->
+<---      Services Page         -->
 <--- -------------------------- -*/
+
+/* Services page needs full-width sections */
+.page-services {
+    .cs-page-section {
+        padding: 0;
+    }
+    .cs-page-section > .cs-container {
+        max-width: none;
+        padding: 0;
+    }
+}
+
+/* ============================================
+   Services Hero
+   ============================================ */
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    .page-services main {
-        background-color: var(--tertiaryLight);
-    }
-
-    #services {
-        padding: var(--sectionPadding);
-        position: relative;
-        z-index: 1;
-        background-color: var(--tertiaryLight);
+    #services-hero {
+        padding: clamp(5rem, 12vw, 8rem) 1rem clamp(4rem, 8vw, 5rem);
+        /* Extra top padding to clear fixed header */
+        padding-top: clamp(8rem, 14vw, 11rem);
+        background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+        text-align: center;
 
         .cs-container {
             width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: (550/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            max-width: (900/16rem);
+            margin: 0 auto;
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            max-width: (800/16rem);
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
             align-items: center;
         }
 
         .cs-topper {
-            color: var(--headerColor)
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 0 (12/16rem) 0;
         }
-        .cs-title,
+
+        .cs-title {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (24/16rem) 0;
+            color: #fff;
+        }
+
         .cs-text {
-            max-width: 100%;
+            font-size: clamp(1.0625rem, 2vw, 1.25rem);
+            line-height: 1.7em;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: (700/16rem);
+        }
+    }
+}
+
+/* ============================================
+   Core Services Cards
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-core {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1100/16rem);
+            margin: 0 auto;
         }
 
         .cs-card-group {
             margin: 0;
             padding: 0;
             width: 100%;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            /* 16px - 20px */
-            gap: clamp(1rem, 2vw, 1.25rem);
-        }
-
-        .cs-services-cta {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .cs-item {
-            width: 100%;
-            text-align: center;
-            list-style: none;
-            /* margin top value to match the negative margin value of the .cs-icon-wrapper */
-            margin: (44/16rem) 0 0 0;
-            /* 24px - 64px bottom */
-            /* 24px - 40px left & right */
-            padding: 0 clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 6vw, 4rem);
-            background-color: #f7f3ee;
-            /* prevents padding and border from affecting height and width */ 
-            box-sizing: border-box;
-            grid-column: span 12;
-            grid-row: span 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            position: relative;
-            z-index: 1;
-
-            &:hover {
-                .cs-h3 {
-                    color: var(--bodyTextColorWhite);
-                }
-                .cs-item-text {
-                    color: var(--bodyTextColorWhite);
-                    opacity: 0.9;
-                }
-                .cs-background {
-                    opacity: 1;
-                }
-            }
+            gap: (24/16rem);
         }
 
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            max-width: (400/16rem);
+            padding: clamp(2rem, 5vw, 2.5rem);
+            background-color: #fff;
+            border: 1px solid var(--primaryLight);
+            border-radius: (12/16rem);
             text-align: center;
-            margin: auto;
-            color: var(--bodyTextColorWhite);
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--secondary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            transition: color 0.3s;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
 
             &:hover {
-                color: #fff;
-                &:before {
-                    width: 100%;
-                }
+                transform: translateY(-4px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
             }
         }
 
         .cs-icon-wrapper {
-            width: (88/16rem);
-            height: (88/16rem);
-            margin: (32/16rem) 0 (16/16rem) 0;
-            // background-color: var(--primary);
+            width: (72/16rem);
+            height: (72/16rem);
+            margin-bottom: (20/16rem);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .cs-icon {
-            width: (40/16rem);
-            height: auto;
+            width: (32/16rem);
+            height: (32/16rem);
+            fill: #fff;
         }
 
         .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
-            font-weight: bold;
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            font-weight: 700;
+            line-height: 1.3em;
             margin: 0 0 (12/16rem) 0;
             color: var(--headerColor);
-            min-height: 2.5em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            max-width: (300/16rem);
-            margin: 0 0 (32/16rem) 0;
-            padding: 0;
-            color: var(--bodyTextColor);
-        }
-
-        .cs-link {
-            text-decoration: none;
-            font-size: (16/20rem);
-            line-height: 1.2em;
-            font-weight: bold;
+            font-size: var(--bodyFontSize);
+            line-height: 1.7em;
             margin: 0;
-            padding: 0;
-            color: var(--primary);
-            position: relative;
-            transition: color 0.3s;
-
-            &:hover {
-                color: #fff;
-            }
-
-            &:before {
-                /* underline */
-                content: "";
-                width: 100%;
-                height: 1px;
-                background: currentColor;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                bottom: (0/16rem);
-                left: 0;
-            }
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            transition: opacity 0.3s;
-
-            &:before {
-                /* background color overlay */
-                content: "";
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 100%;
-                background: #1a1a1a;
-                opacity: 0.84;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* Makes img tag act as a background image */
-                object-fit: cover;
-            }
-        }
-
-        .cs-waves {
-            width: 100%;
-            height: (222/16rem);
-            background-color: var(--primary);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
+            color: var(--bodyTextColor);
         }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-
-    #services {
-        .cs-container {
-            max-width: (1280/16rem);
+    #services-core {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: clamp(1.25rem, 2.5vw, 2rem);
         }
 
         .cs-item {
-            grid-column: span 4;
+            flex: 1;
+            max-width: (380/16rem);
         }
     }
 }
 
-                                
+/* ============================================
+   Why Choose Us
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-why {
+        padding: var(--sectionPadding);
+        background-color: var(--tertiaryLight);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1000/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            text-align: center;
+            margin-bottom: clamp(2.5rem, 6vw, 3.5rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 0 0 (12/16rem) 0;
+            display: block;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0;
+            color: var(--headerColor);
+        }
+
+        .cs-benefit-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        .cs-benefit {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: (12/16rem);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .cs-benefit-icon {
+            width: (48/16rem);
+            height: (48/16rem);
+            margin-bottom: (12/16rem);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: (24/16rem);
+                height: (24/16rem);
+                fill: #fff;
+            }
+        }
+
+        .cs-benefit-content {
+            flex: 1;
+        }
+
+        .cs-benefit-title {
+            font-size: clamp(1.0625rem, 2vw, 1.25rem);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin: 0 0 (8/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-benefit-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.6em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-why {
+        .cs-benefit-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: (20/16rem);
+        }
+    }
+}
+
+/* ============================================
+   Process Section
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-process {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1100/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            text-align: center;
+            margin-bottom: clamp(2.5rem, 6vw, 3.5rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 0 0 (12/16rem) 0;
+            display: block;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.6em;
+            margin: 0 auto;
+            color: var(--bodyTextColor);
+            max-width: (650/16rem);
+        }
+
+        .cs-process-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: (20/16rem);
+        }
+
+        .cs-step {
+            list-style: none;
+            text-align: center;
+            padding: clamp(1.75rem, 4vw, 2.25rem);
+            background-color: var(--tertiaryLight);
+            border-radius: (12/16rem);
+            position: relative;
+        }
+
+        .cs-step-number {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: (56/16rem);
+            height: (56/16rem);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+            color: #fff;
+            font-size: (22/16rem);
+            font-weight: 700;
+            border-radius: 50%;
+            margin-bottom: (16/16rem);
+        }
+
+        .cs-step-title {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin: 0 0 (10/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-step-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.6em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-process {
+        .cs-process-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: (24/16rem);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-process {
+        .cs-process-list {
+            grid-template-columns: repeat(4, 1fr);
+            gap: (20/16rem);
+        }
+    }
+}
+
+/* ============================================
+   Services CTA
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-cta {
+        padding: clamp(4rem, 10vw, 6rem) 1rem;
+        background: linear-gradient(135deg, var(--headerColor) 0%, var(--secondary) 100%);
+        text-align: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: (800/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (20/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-text {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.7em;
+            margin: 0 0 (32/16rem) 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: (600/16rem);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: clamp(3rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            color: var(--headerColor);
+            min-width: (180/16rem);
+            padding: 0 (36/16rem);
+            background-color: #fff;
+            border-radius: (6/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
