@@ -1,57 +1,107 @@
 /*-- -------------------------- -->
-<---         About Us           -->
+<---         About Page         -->
 <--- -------------------------- -*/
+
+/* About page needs full-width sections */
+.page-about {
+    .cs-page-section {
+        padding: 0;
+    }
+    .cs-page-section > .cs-container {
+        max-width: none;
+        padding: 0;
+    }
+}
+
+/* ============================================
+   About Hero
+   ============================================ */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #about {
-        padding: var(--sectionPadding);
-        background-color: #fafbfc;
-        position: relative;
-        z-index: 1;
+    #about-hero {
+        padding: clamp(5rem, 12vw, 8rem) 1rem clamp(4rem, 8vw, 5rem);
+        padding-top: clamp(8rem, 14vw, 11rem);
+        background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+        text-align: center;
 
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 32px - 64px */
-            gap: clamp(2rem, 5vw, 4rem);
+            max-width: (900/16rem);
+            margin: 0 auto;
         }
 
         .cs-content {
-            width: 100%;
-            max-width: (650/16rem);
-            text-align: left;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .cs-topper {
             font-size: var(--topperFontSize);
             line-height: 1.2em;
             text-transform: uppercase;
-            letter-spacing: .1em;
+            letter-spacing: .15em;
             font-weight: 700;
-            color: var(--secondary);
-            margin: 0 0 (8/16rem) 0;
-            display: block;
+            color: var(--primary);
+            margin: 0 0 (12/16rem) 0;
+        }
+
+        .cs-title {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (24/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-text {
+            font-size: clamp(1.0625rem, 2vw, 1.25rem);
+            line-height: 1.7em;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: (700/16rem);
+        }
+    }
+}
+
+/* ============================================
+   About Story
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #about-story {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1100/16rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(2rem, 5vw, 3rem);
+        }
+
+        .cs-content {
+            width: 100%;
+            max-width: (650/16rem);
+            text-align: center;
         }
 
         .cs-title {
             font-size: var(--headerFontSize);
             font-weight: 900;
             line-height: 1.2em;
-            margin: 0 0 (16/16rem) 0;
+            margin: 0 0 (20/16rem) 0;
             color: var(--headerColor);
         }
 
         .cs-text {
             font-size: var(--bodyFontSize);
-            line-height: 1.5em;
+            line-height: 1.7em;
             margin: 0 0 (16/16rem) 0;
             color: var(--bodyTextColor);
         }
@@ -62,13 +112,13 @@
 
         .cs-picture {
             width: 100%;
-            max-width: (650/16rem);
+            max-width: (550/16rem);
             display: block;
             position: relative;
             overflow: hidden;
-            border-radius: (8/16rem);
-            /* keeps a consistent card shape */
-            aspect-ratio: 3 / 4;
+            border-radius: (12/16rem);
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
         .cs-picture img {
@@ -85,19 +135,194 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #about {
+    #about-story {
         .cs-container {
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: clamp(3rem, 6vw, 5rem);
         }
 
         .cs-content {
-            max-width: (620/16rem);
+            flex: 1;
+            max-width: (550/16rem);
+            text-align: left;
         }
 
         .cs-picture {
-            max-width: (520/16rem);
+            flex: 1;
+            max-width: (450/16rem);
+        }
+    }
+}
+
+/* ============================================
+   About Values
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #about-values {
+        padding: var(--sectionPadding);
+        background-color: var(--tertiaryLight);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1100/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            text-align: center;
+            margin-bottom: clamp(2.5rem, 6vw, 3.5rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 0 0 (12/16rem) 0;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0;
+            color: var(--headerColor);
+        }
+
+        .cs-value-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        .cs-value {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            padding: clamp(1.5rem, 4vw, 2rem);
+            border-radius: (12/16rem);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .cs-value-icon {
+            width: (48/16rem);
+            height: (48/16rem);
+            margin-bottom: (12/16rem);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: (24/16rem);
+                height: (24/16rem);
+                fill: #fff;
+            }
+        }
+
+        .cs-value-title {
+            font-size: clamp(1.0625rem, 2vw, 1.25rem);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin: 0 0 (8/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-value-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.6em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #about-values {
+        .cs-value-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: (20/16rem);
+        }
+    }
+}
+
+/* ============================================
+   About CTA
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #about-cta {
+        padding: clamp(4rem, 10vw, 6rem) 1rem;
+        background: linear-gradient(135deg, var(--headerColor) 0%, var(--secondary) 100%);
+        text-align: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: (800/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (20/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-text {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.7em;
+            margin: 0 0 (32/16rem) 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: (600/16rem);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: clamp(3rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            color: var(--headerColor);
+            min-width: (180/16rem);
+            padding: 0 (36/16rem);
+            background-color: #fff;
+            border-radius: (6/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+                transform: translateY(-2px);
+            }
         }
     }
 }
