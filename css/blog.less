@@ -1,13 +1,269 @@
-/* Blog index + blog post styles */
+/*-- -------------------------- -->
+<---        Blog Index Page     -->
+<--- -------------------------- -*/
 
-/* Base layout pages need room for fixed nav - scoped to pages with blog content */
-body:has(#blog-index) .cs-page-section,
+/* Blog index page needs full-width sections */
+.page-blog {
+    .cs-page-section {
+        padding: 0;
+    }
+    .cs-page-section > .cs-container {
+        max-width: none;
+        padding: 0;
+    }
+}
+
+/* ============================================
+   Blog Hero
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #blog-hero {
+        padding: clamp(5rem, 12vw, 8rem) 1rem clamp(4rem, 8vw, 5rem);
+        padding-top: clamp(8rem, 14vw, 11rem);
+        background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+        text-align: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: (900/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 0 (12/16rem) 0;
+        }
+
+        .cs-title {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (24/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-text {
+            font-size: clamp(1.0625rem, 2vw, 1.25rem);
+            line-height: 1.7em;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: (700/16rem);
+        }
+    }
+}
+
+/* ============================================
+   Blog Posts Grid
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #blog-posts {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1200/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-post-list {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: (24/16rem);
+        }
+
+        .cs-post-card {
+            list-style: none;
+            background-color: #fff;
+            border: 1px solid var(--primaryLight);
+            border-radius: (12/16rem);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .cs-post-content {
+            padding: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .cs-post-date {
+            font-size: (13/16rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            margin-bottom: (12/16rem);
+            display: block;
+        }
+
+        .cs-post-title {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin: 0 0 (12/16rem) 0;
+            color: var(--headerColor);
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+        }
+
+        .cs-post-excerpt {
+            font-size: var(--bodyFontSize);
+            line-height: 1.7em;
+            color: var(--bodyTextColor);
+            margin: 0 0 (20/16rem) 0;
+        }
+
+        .cs-post-link {
+            display: inline-flex;
+            align-items: center;
+            gap: (8/16rem);
+            font-size: (15/16rem);
+            font-weight: 700;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s, gap 0.3s;
+
+            svg {
+                width: (18/16rem);
+                height: (18/16rem);
+                fill: currentColor;
+                transition: transform 0.3s;
+            }
+
+            &:hover {
+                color: var(--headerColor);
+                gap: (12/16rem);
+
+                svg {
+                    transform: translateX(2px);
+                }
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #blog-posts {
+        .cs-post-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #blog-posts {
+        .cs-post-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* ============================================
+   Blog CTA
+   ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #blog-cta {
+        padding: clamp(4rem, 10vw, 6rem) 1rem;
+        background: linear-gradient(135deg, var(--headerColor) 0%, var(--secondary) 100%);
+        text-align: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: (800/16rem);
+            margin: 0 auto;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 (20/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-text {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.7em;
+            margin: 0 0 (32/16rem) 0;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: (600/16rem);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: clamp(3rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            color: var(--headerColor);
+            min-width: (180/16rem);
+            padding: 0 (36/16rem);
+            background-color: #fff;
+            border-radius: (6/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        Blog Post Page      -->
+<--- -------------------------- -*/
+
+/* Blog post page layout */
 body:has(#blog-post) .cs-page-section {
     padding: var(--sectionPadding);
     padding-top: clamp(8rem, 14vw, 11rem);
 }
 
-body:has(#blog-index) .cs-container,
 body:has(#blog-post) .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -15,128 +271,8 @@ body:has(#blog-post) .cs-container {
     box-sizing: border-box;
 }
 
-/* Shared blog styles */
-#blog-index,
 #blog-post {
     width: 100%;
-}
-
-#blog-index .cs-content {
-    max-width: 50rem;
-}
-
-#blog-index .cs-topper {
-    color: var(--secondary);
-}
-
-/* Blog index cards */
-#blog-index .cs-blog-card-group {
-    margin: clamp(2rem, 5vw, 3rem) 0 0 0;
-    padding: 0;
-    list-style: none;
-
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: clamp(1rem, 2.5vw, 1.5rem);
-}
-
-#blog-index .cs-blog-card {
-    grid-column: span 12;
-    background-color: #fff;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    position: relative;
-
-    padding: clamp(1.25rem, 3vw, 1.75rem);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-#blog-index .cs-blog-card:hover {
-    transform: translateY(-2px);
-    box-shadow: rgba(149, 157, 165, 0.25) 0 10px 18px;
-    border-color: rgba(27, 105, 182, 0.25);
-}
-
-#blog-index .cs-blog-card-title {
-    margin: 0 0 0.5rem 0;
-    font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-    line-height: 1.2em;
-    font-weight: 800;
-    color: var(--headerColor);
-}
-
-#blog-index .cs-blog-card-link {
-    color: inherit;
-    text-decoration: none;
-}
-
-#blog-index .cs-blog-card-link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-}
-
-#blog-index .cs-blog-meta {
-    margin: 0 0 0.75rem 0;
-    color: var(--bodyTextColor);
-    opacity: 0.85;
-    font-size: 0.95em;
-}
-
-#blog-index .cs-blog-card-description {
-    margin: 0 0 1rem 0;
-    max-width: 100%;
-}
-
-#blog-index .cs-blog-readmore {
-    display: inline-block;
-    font-weight: 700;
-    color: var(--secondary);
-    text-decoration: none;
-    position: relative;
-}
-
-#blog-index .cs-blog-readmore:before {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: currentColor;
-    opacity: 0.25;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-}
-
-#blog-index .cs-blog-readmore:hover {
-    color: var(--headerColor);
-}
-
-#blog-index .cs-blog-footer {
-    margin-top: clamp(2rem, 5vw, 3rem);
-}
-
-#blog-index .cs-blog-rss {
-    color: var(--secondary);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-#blog-index .cs-blog-rss:hover {
-    text-decoration: underline;
-}
-
-@media only screen and (min-width: 48rem) {
-    #blog-index .cs-blog-card {
-        grid-column: span 6;
-    }
-}
-
-@media only screen and (min-width: 64rem) {
-    #blog-index .cs-blog-card {
-        grid-column: span 4;
-    }
 }
 
 /* Blog post page */

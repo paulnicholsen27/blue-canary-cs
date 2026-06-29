@@ -5,32 +5,62 @@ description: Articles and updates from Blue Canary Web Design.
 permalink: blog/index.html
 ---
 
-<div id="blog-index">
-  <div class="cs-content">
-    <span class="cs-topper">Blog</span>
-    <h1 class="cs-title">Blog</h1>
-    <p class="cs-text">Articles and updates from Blue Canary Web Design.</p>
-  </div>
+<!-- ============================================ -->
+<!--                 Blog Hero                    -->
+<!-- ============================================ -->
 
-  <ul class="cs-blog-card-group">
-    {%- for post in collections.post | reverse -%}
-      <li class="cs-blog-card">
-        <h2 class="cs-blog-card-title">
-          <a class="cs-blog-card-link" href="{{ post.url }}">{{ post.data.title }}</a>
-        </h2>
+<section id="blog-hero">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Blog</span>
+            <h1 class="cs-title">Insights & Updates</h1>
+            <p class="cs-text">
+                Practical advice on web design, accessibility, and building a website that actually works for your business.
+            </p>
+        </div>
+    </div>
+</section>
 
-        {% if post.data.date %}
-          <p class="cs-blog-meta">
-            <time datetime="{{ post.data.date | dateToRfc3339 }}">{{ post.data.date | readableDate }}</time>
-          </p>
-        {% endif %}
+<!-- ============================================ -->
+<!--                 Blog Posts                   -->
+<!-- ============================================ -->
 
-        {% if post.data.description %}
-          <p class="cs-text cs-blog-card-description">{{ post.data.description }}</p>
-        {% endif %}
+<section id="blog-posts">
+    <div class="cs-container">
+        <ul class="cs-post-list">
+            {%- for post in collections.post | reverse -%}
+            <li class="cs-post-card">
+                <div class="cs-post-content">
+                    {% if post.data.date %}
+                    <time class="cs-post-date" datetime="{{ post.data.date | dateToRfc3339 }}">{{ post.data.date | readableDate }}</time>
+                    {% endif %}
+                    <h2 class="cs-post-title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    {% if post.data.description %}
+                    <p class="cs-post-excerpt">{{ post.data.description }}</p>
+                    {% endif %}
+                    <a class="cs-post-link" href="{{ post.url }}">
+                        Read Article
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </a>
+                </div>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</section>
 
-        <a class="cs-blog-readmore" href="{{ post.url }}">Read more</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-</div>
+<!-- ============================================ -->
+<!--                 Blog CTA                     -->
+<!-- ============================================ -->
+
+<section id="blog-cta">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Ready to Get Started?</h2>
+            <p class="cs-text">Let's talk about your website and how we can help your business grow.</p>
+            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
+        </div>
+    </div>
+</section>
