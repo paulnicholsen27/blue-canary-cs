@@ -9,10 +9,6 @@
 
 		<!-- Render-blocking CSS: start fetch ASAP -->
 		<link rel="preload" href="css/main.css" as="style" fetchpriority="high" />
-        <!-- LCP (Hero) image: preload + high fetch priority -->
-        <link rel="preload" as="image" href="assets/images/hero-background-m.webp" media="(max-width: 600px)" type="image/webp" fetchpriority="high" />
-        <link rel="preload" as="image" href="assets/images/hero-background-t.webp" media="(min-width: 601px) and (max-width: 1023px)" type="image/webp" fetchpriority="high" />
-        <link rel="preload" as="image" href="assets/images/hero-background-d.webp" media="(min-width: 1024px)" type="image/webp" fetchpriority="high" />
 
 		<link rel="stylesheet" href="css/main.css" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -105,63 +101,59 @@
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-        <section id="hero-540">
-            <div class="cs-container">
-                <div class="cs-content">
-                    <h1 class="cs-title">A Better Website Starts Here.</h1>
-                    <p class="cs-text">
-                        Clear design and honest messaging for businesses that care about what they do. 
-                    </p>
-                    <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
-                </div>
-            </div>
-            <!--Background Color-->
-            <picture class="cs-background">
-                <source media="(min-width: 1024px)" srcset="assets/images/hero-background-d.webp">
-                <source media="(min-width: 601px)" srcset="assets/images/hero-background-t.webp">
-                <source media="(max-width: 600px)" srcset="assets/images/hero-background-m.webp">
-				<img aria-hidden="true" decoding="async" loading="eager" fetchpriority="high" src="assets/images/hero-background-d.webp" alt="hands typing on laptop" width="275" height="132">
-            </picture>
-        </section>
-                           
-
-<section id="services-1121">
+<section id="home-hero">
     <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Web Design for Small Business</span>
+            <h1 class="cs-title">A Better Website Starts Here</h1>
+            <p class="cs-text">
+                Clear design and honest messaging for businesses that care about what they do. We build fast, accessible websites that help your clients find you and trust you.
+            </p>
+            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+
+<section id="home-services">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">What We Do</span>
+            <h2 class="cs-title">Everything You Need to Succeed Online</h2>
+        </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <div class="cs-image-group">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp" alt="Blue Canary logo" width="48" height="48">
+                <div class="cs-icon-wrapper">
+                    <svg class="cs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm6 13h4v2H8l-1 2h10l-1-2h-2v-2h5a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h5v2z"/></svg>
                 </div>
-                <div class="cs-flex">
-                    <h2 class="cs-h2">Custom Website Design</h2>
-                    <p class="cs-item-text">
-                        Professional, approachable websites designed for clarity, usability, and a strong first impression.
-                    </p>
-                </div>
+                <h3 class="cs-h3">Custom Website Design</h3>
+                <p class="cs-item-text">
+                    Professional, approachable websites designed for clarity, usability, and a strong first impression.
+                </p>
             </li>
             <li class="cs-item">
-                <div class="cs-image-group">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp" alt="Blue Canary logo" width="48" height="48">
+                <div class="cs-icon-wrapper">
+                    <svg class="cs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 </div>
-                <div class="cs-flex">
-                    <h2 class="cs-h2">SEO-Focused Copywriting</h2>
-                    <p class="cs-item-text">
-                        Clear, search-optimized copy that helps your business get found while sounding natural and trustworthy.
-                    </p>
-                </div>
+                <h3 class="cs-h3">SEO-Focused Copywriting</h3>
+                <p class="cs-item-text">
+                    Clear, search-optimized copy that helps your business get found while sounding natural and trustworthy.
+                </p>
             </li>
             <li class="cs-item">
-                <div class="cs-image-group">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="assets/logos/vert_rt_icononly_transparent_nobuffer_sm.webp" alt="Blue Canary logo" width="48" height="48">
+                <div class="cs-icon-wrapper">
+                    <svg class="cs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 1.45-.39 2.81-1.06 3.98l1.73 1c.83-1.47 1.33-3.15 1.33-4.98 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-1.73-1A7.954 7.954 0 0 1 12 19z"/></svg>
                 </div>
-                <div class="cs-flex">
-                    <h2 class="cs-h2">Fast, Accessible Websites</h2>
-                    <p class="cs-item-text">
-                        Clean code, responsive layouts, and thoughtful design choices that improve usability and speed.
-                    </p>
-                </div>
+                <h3 class="cs-h3">Fast, Accessible Websites</h3>
+                <p class="cs-item-text">
+                    Clean code, responsive layouts, and thoughtful design choices that improve usability and speed.
+                </p>
             </li>
         </ul>
+        <a href="/services/" class="cs-button-link">View All Services →</a>
     </div>
 </section>
 
@@ -169,7 +161,7 @@
 <!--                   Reviews                    -->
 <!-- ============================================ -->
 
-<section id="reviews">
+<section id="home-reviews">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Testimonials</span>
@@ -258,6 +250,20 @@
     }
 }
 </script>
+
+<!-- ============================================ -->
+<!--                  Home CTA                    -->
+<!-- ============================================ -->
+
+<section id="home-cta">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Ready to Get Started?</h2>
+            <p class="cs-text">Let's talk about your website and how we can help your business grow.</p>
+            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
+        </div>
+    </div>
+</section>
                                 
 <!-- ============================================ -->
 <!--                Contact Form                  -->
@@ -268,9 +274,9 @@
             <!-- Contact Info -->
             <div class="cs-content">
                 <span class="cs-topper">Contact Us</span>
-                <h2 class="cs-title">Contact Information</h2>
+                <h2 class="cs-title">Get In Touch</h2>
                 <p class="cs-text">
-                    Not sure where to start? That's okay. Send us a message and we'll walk through your needs, answer your questions, and help you decide on the right next step.
+                    Not sure where to start? Send us a message and we'll help you decide on the right next step.
                 </p>
                 
                 <!--Email-->
