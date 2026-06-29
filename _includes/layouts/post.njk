@@ -29,3 +29,34 @@ layout: layouts/base.njk
     <a class="cs-blog-back" href="/blog/">Back to all posts</a>
   </footer>
 </article>
+
+<!-- Article Schema for SEO -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title | escape }}",
+    "description": "{{ description | escape }}",
+    "datePublished": "{{ date | dateToRfc3339 }}",
+    "dateModified": "{{ date | dateToRfc3339 }}",
+    {% if shareImage %}"image": "{{ site.url }}{{ shareImage }}",{% endif %}
+    "author": {
+        "@type": "Organization",
+        "name": "Blue Canary Web Design",
+        "url": "https://www.bluecanarywebdesign.com"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Blue Canary Web Design",
+        "url": "https://www.bluecanarywebdesign.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bluecanarywebdesign.com/assets/logos/vert_rt_fulllogo.png"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+    }
+}
+</script>
