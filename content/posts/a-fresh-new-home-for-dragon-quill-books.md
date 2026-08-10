@@ -3,7 +3,7 @@ title: A Fresh New Home for Dragon Quill Books
 description: See how Blue Canary Web Design gave Dragon Quill Books a faster,
   more accessible site, earning perfect 100 PageSpeed scores across the board.
 shareImage: /assets/images/uploads/dragon-quill-logo-horizontal.png
-date: 2026-08-01
+date: 2026-08-10
 tags:
   - website
   - redesign
@@ -46,7 +46,7 @@ The report also shows a passing score on Agentic Browsing checks, a newer benchm
 
 Beyond the numbers, what we're proudest of is a site that feels like Dragon Quill Books: warm, inviting, and built around the stories at its heart. The new foundation also makes it easy to add new books, blog posts, and pages as the catalog grows, without sacrificing any of that speed or polish.
 
-You can explore the new site for yourself at [dragonquillbooks.com](https://www.dragonquillbooks.com).
+You can explore the new site for yourself at [www.dragonquillbooks.com](https://www.dragonquillbooks.com).
 
 - - -
 
