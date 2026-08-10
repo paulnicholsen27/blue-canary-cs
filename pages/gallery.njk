@@ -72,6 +72,29 @@ permalink: gallery/index.html
                     </div>
                 </a>
             </li>
+            <li class="cs-gallery-item">
+                <a class="cs-gallery-link" href="https://www.dragonquillbooks.com" target="_blank" rel="noopener">
+                    <picture class="cs-gallery-picture">
+                       <!--Mobile Image-->
+                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 111, height: 222 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 111, height: 222 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 111, height: 222 }) | jpeg %}" type="image/jpeg">
+                       <!--Tablet Image-->
+                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 333, height: 444 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 333, height: 444 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 333, height: 444 }) | jpeg %}" type="image/jpeg">
+                       <!--Desktop Image-->
+                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
+                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
+                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | jpeg %}" type="image/jpeg">
+                       <img class="cs-gallery-img" src="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | jpeg %}" alt="screenshot of dragonquillbooks.com" width="600" height="400" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <div class="cs-gallery-info">
+                        <h2 class="cs-gallery-title">Dragon Quill Books</h2>
+                        <p class="cs-gallery-desc">Independent bookstore</p>
+                    </div>
+                </a>
+            </li>
         </ul>
     </div>
 </section>
