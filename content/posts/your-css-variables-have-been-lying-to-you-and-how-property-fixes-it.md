@@ -9,7 +9,7 @@ Quick question. Have you ever tried to animate a gradient with CSS and just... w
 
 Turns out it's not you. It's a secret your CSS variables have been keeping this whole time: they don't actually know what they are.
 
-## The problem nobody warns you about
+## The Problem
 
 When you write something like this:
 
