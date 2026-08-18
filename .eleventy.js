@@ -2,6 +2,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.ignores.add('README.md');
 
   // Rebuild when generated CSS changes (e.g. from lessc watcher)
   eleventyConfig.addWatchTarget('./css/main.css');
