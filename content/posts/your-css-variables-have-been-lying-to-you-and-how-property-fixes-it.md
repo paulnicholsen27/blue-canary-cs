@@ -54,33 +54,16 @@ Without `@property`, this animation just does nothing visible, the gradient sits
 
 ## A second trick: animating a gradient's actual colors
 
-You know how you can't transition `background: linear-gradient(...)` directly? That's the same root problem. But register your color stops as typed properties and you're off to the races.
+You know how you can't transition `background: linear-gradient(...)` directly? That's the same root problem. But register your color stops as typed properties and watch the magic!.
 
-```css
-@property --stop-1 {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #6a11cb;
-}
+<p class="codepen" data-height="300" data-pen-title="@property Animated Color Gradient" data-version="2" data-default-tab="html,result" data-slug-hash="RNKzzQJ" data-user="Paul-Nicholsen" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/editor/Paul-Nicholsen/pen/01a016ed-83e2-7a1e-b740-2c733aeb7cb3">
+  @property Animated Color Gradient</a> by B (<a href="https://codepen.io/Paul-Nicholsen">@Paul-Nicholsen</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
 
-@property --stop-2 {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #2575fc;
-}
-
-.hero {
-  background: linear-gradient(135deg, var(--stop-1), var(--stop-2));
-  transition: --stop-1 0.6s ease, --stop-2 0.6s ease;
-}
-
-.hero:hover {
-  --stop-1: #f857a6;
-  --stop-2: #ff5858;
-}
-```
-
-Hover over that element and the gradient itself melts from purple-blue into pink-red, no JavaScript, no extra elements layered on top, just CSS finally treating your colors like colors instead of alphabet soup.
+Hover over that element and the gradient itself melts between colors, no JavaScript, no extra elements layered on top, just CSS finally treating your colors like colors instead of alphabet soup.  Look how pretty!
 
 ## The fine print
 
