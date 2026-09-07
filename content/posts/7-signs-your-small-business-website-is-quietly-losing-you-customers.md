@@ -49,4 +49,4 @@ If you read through that list and felt a little called out, you're in good compa
 
 The good news is that none of this usually requires starting from scratch. A focused audit can tell you exactly which of these are costing you the most, and in what order to fix them.
 
-That's the kind of work we do at Blue Canary Web Design: practical, no-jargon website help for small businesses that would rather be running their business than fighting with their website. If you want a second pair of eyes on yours, [get in touch](https://www.bluecanarywebdesign.com/contact) and we'll tell you straight what's working, what isn't, and what's worth fixing first.
+That's the kind of work we do at Blue Canary Web Design: practical, no-jargon website help for small businesses that would rather be running their business than fighting with their website. If you want a second pair of eyes on yours, [get in touch](https://www.bluecanarywebdesign.com/blog/7-signs-your-small-business-website-is-quietly-losing-you-customers/#contact) and we'll tell you straight what's working, what isn't, and what's worth fixing first.
