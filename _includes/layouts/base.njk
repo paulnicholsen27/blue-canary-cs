@@ -2,24 +2,23 @@
 <html lang="en">
   <head>
     {% set ogTypeValue = ogType or 'website' %}
-    {% set shareImageValue = shareImage or site.defaultShareImage %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472624902"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18472624902');
+    </script>
     {% if shareImageValue %}
       {% set shareImageUrl = site.url + shareImageValue %}
     {% endif %}
 
     <title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% if description %}<meta name="description" content="{{ description | escape }}" />{% endif %}
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-
-    <link rel="stylesheet" href="/css/main.css" />
-
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/favicon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/favicon-512x512.png">
 
     <meta property="og:type" content="{{ ogTypeValue }}" />
     <meta property="og:site_name" content="{{ site.name | escape }}" />
