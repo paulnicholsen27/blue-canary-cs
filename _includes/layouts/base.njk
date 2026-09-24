@@ -82,7 +82,9 @@
   {% set pageSlug = page.url | replace("/", "") | replace("/", "-") or "home" %}
   <body class="page-{{ pageSlug }}{% if bodyClass %} {{ bodyClass }}{% endif %}">
     {% include "partials/nav.njk" %}
-    
+
+
+    <main id="main"{% if mainClass %} class="{{ mainClass }}"{% endif %}>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472624902"></script>
     <script>
@@ -92,8 +94,6 @@
 
       gtag('config', 'AW-18472624902');
     </script>
-
-    <main id="main"{% if mainClass %} class="{{ mainClass }}"{% endif %}>
       <section class="cs-page-section">
         <div class="cs-container">
           {{ content | safe }}
