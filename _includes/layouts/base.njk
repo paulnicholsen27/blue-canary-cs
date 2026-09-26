@@ -9,7 +9,9 @@
 
     <title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% if description %}<meta name="description" content="{{ description | escape }}" />{% endif %}
+    <link rel="stylesheet" href="/css/main.css" />
 
     <meta property="og:type" content="{{ ogTypeValue }}" />
     <meta property="og:site_name" content="{{ site.name | escape }}" />
