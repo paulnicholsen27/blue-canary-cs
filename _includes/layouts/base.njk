@@ -2,16 +2,7 @@
 <html lang="en">
   <head>
     {% set ogTypeValue = ogType or 'website' %}
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472624902"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-18472624902');
-    </script>
+    {% set shareImageValue = shareImage or site.defaultShareImage %}
     {% if shareImageValue %}
       {% set shareImageUrl = site.url + shareImageValue %}
     {% endif %}
@@ -74,25 +65,20 @@
     }
     </script>
     {% endif %}
-    
-
-
-  </head>
-  {% set pageSlug = page.url | replace("/", "") | replace("/", "-") or "home" %}
-  <body class="page-{{ pageSlug }}{% if bodyClass %} {{ bodyClass }}{% endif %}">
-    {% include "partials/nav.njk" %}
-
-
-    <main id="main"{% if mainClass %} class="{{ mainClass }}"{% endif %}>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472624902"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-18472624902');
     </script>
+  </head>
+  {% set pageSlug = page.url | replace("/", "") | replace("/", "-") or "home" %}
+  <body class="page-{{ pageSlug }}{% if bodyClass %} {{ bodyClass }}{% endif %}">
+    {% include "partials/nav.njk" %}
+
+    <main id="main"{% if mainClass %} class="{{ mainClass }}"{% endif %}>
       <section class="cs-page-section">
         <div class="cs-container">
           {{ content | safe }}
