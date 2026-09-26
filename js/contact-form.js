@@ -166,6 +166,14 @@
                         successEl.textContent = "We'll be in touch soon!";
                         successEl.hidden = false;
                     }
+                    // Fire Google Ads conversion only on confirmed success
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-18472624902/aVOCCO_u14UdEIbGt-hE',
+                            'value': 1.0,
+                            'currency': 'USD'
+                        });
+                    }
                 })
                 .catch(function () {
                     if (errorEl) {
