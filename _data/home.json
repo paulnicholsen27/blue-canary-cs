@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Web Design for Small Business",
+    "title": "A Better Website Starts Here",
+    "body": "Clear design and honest messaging for businesses that care about what they do. We build fast, accessible websites that help your clients find you and trust you.",
+    "buttonText": "Schedule a Free Consultation",
+    "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+  },
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Everything You Need to Succeed Online",
+    "items": [
+      { "title": "Custom Website Design", "body": "Professional, approachable websites designed for clarity, usability, and a strong first impression." },
+      { "title": "SEO-Focused Copywriting", "body": "Clear, search-optimized copy that helps your business get found while sounding natural and trustworthy." },
+      { "title": "Fast, Accessible Websites", "body": "Clean code, responsive layouts, and thoughtful design choices that improve usability and speed." }
+    ],
+    "linkText": "View All Services",
+    "linkUrl": "/services/"
+  },
+  "reviews": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Clients Say",
+    "intro": "Real feedback from businesses we've helped grow online.",
+    "sourceUrl": "https://share.google/efm3rix8NT4m7b3sr",
+    "items": [
+      { "quote": "Blue Canary Web Design completely transformed our online presence. The site is fast, beautiful, and our PageSpeed scores went from frustrating to a perfect 100. Parents find us easily now, and the whole process was seamless.", "name": "District Scholars", "url": "https://www.districtscholars.com", "siteLabel": "www.districtscholars.com" },
+      { "quote": "Working with Blue Canary was a breath of fresh air. They understood exactly what my therapy practice needed—a calming, professional website that helps potential clients feel at ease before they even reach out. Highly recommend!", "name": "Within Reach Therapy", "url": "https://www.withinreachtherapy.com", "siteLabel": "www.withinreachtherapy.com" },
+      { "quote": "I couldn't be happier with the new website [Blue Canary Web Design] built for my practice. From our very first conversation, they took the time to understand what I needed and were consistently responsive throughout the entire process.... I highly recommend them to anyone looking for a website designer who is skilled, communicative, and easy to work with.", "name": "Santo Psychotherapy", "url": "https://www.santopsychotherapy.com", "siteLabel": "www.santopsychotherapy.com" }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "body": "Let's talk about your website and how we can help your business grow.",
+    "buttonText": "Schedule a Free Consultation",
+    "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+  }
+}

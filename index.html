@@ -1,10 +1,13 @@
+---
+templateEngineOverride: njk
+---
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Blue Canary Web Design | Fast, Accessible Websites for Small Business</title>
+        <title>{{ site.name }} | Fast, Accessible Websites for Small Business</title>
 		<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Blue Canary Web Design builds fast, accessible websites and SEO-focused copywriting for small businesses. Schedule a free consultation." />
+        <meta name="description" content="{{ site.description | escape }}" />
         <link rel="canonical" href="https://www.bluecanarywebdesign.com/" />
 
 		<!-- Render-blocking CSS: start fetch ASAP -->
@@ -20,19 +23,19 @@
         <link rel="preload" href="assets/fonts/montserrat-v31-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="assets/fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Blue Canary Web Design">
-        <meta property="og:title" content="Blue Canary Web Design | Fast, Accessible Websites for Small Business">
-        <meta property="og:description" content="Blue Canary Web Design builds fast, accessible websites and SEO-focused copywriting for small businesses. Schedule a free consultation.">
+        <meta property="og:site_name" content="{{ site.name | escape }}">
+        <meta property="og:title" content="{{ site.name | escape }} | Fast, Accessible Websites for Small Business">
+        <meta property="og:description" content="{{ site.description | escape }}">
         <meta property="og:url" content="https://www.bluecanarywebdesign.com/">
-        <meta property="og:image" content="https://www.bluecanarywebdesign.com/assets/logos/vert_rt_fulllogo.png">
+        <meta property="og:image" content="{{ site.url }}{{ site.defaultShareImage }}">
         <meta property="og:image:width" content="1280">
         <meta property="og:image:height" content="1024">
         <meta property="og:image:type" content="image/png">
 
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Blue Canary Web Design | Fast, Accessible Websites for Small Business">
-        <meta name="twitter:description" content="Blue Canary Web Design builds fast, accessible websites and SEO-focused copywriting for small businesses. Schedule a free consultation.">
-        <meta name="twitter:image" content="https://www.bluecanarywebdesign.com/assets/logos/vert_rt_fulllogo.png">
+        <meta name="twitter:title" content="{{ site.name | escape }} | Fast, Accessible Websites for Small Business">
+        <meta name="twitter:description" content="{{ site.description | escape }}">
+        <meta name="twitter:image" content="{{ site.url }}{{ site.defaultShareImage }}">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472624902"></script>
         <script>
@@ -53,7 +56,7 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="assets/logos/horiz_rt_fulllogo_transparent_nobuffer_sm.webp" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
+            <img src="{{ site.logo }}" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="cs-nav" role="navigation">
@@ -104,12 +107,12 @@
 <section id="home-hero">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Web Design for Small Business</span>
-            <h1 class="cs-title">A Better Website Starts Here</h1>
+            <span class="cs-topper">{{ home.hero.eyebrow }}</span>
+            <h1 class="cs-title">{{ home.hero.title }}</h1>
             <p class="cs-text">
-                Clear design and honest messaging for businesses that care about what they do. We build fast, accessible websites that help your clients find you and trust you.
+                {{ home.hero.body }}
             </p>
-            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
+            <a href="{{ home.hero.buttonUrl }}" class="cs-button-solid" target="_blank" rel="noopener">{{ home.hero.buttonText }}</a>
         </div>
     </div>
 </section>
@@ -121,39 +124,39 @@
 <section id="home-services">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">What We Do</span>
-            <h2 class="cs-title">Everything You Need to Succeed Online</h2>
+            <span class="cs-topper">{{ home.services.eyebrow }}</span>
+            <h2 class="cs-title">{{ home.services.title }}</h2>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <div class="cs-icon-wrapper">
                     <svg class="cs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm6 13h4v2H8l-1 2h10l-1-2h-2v-2h5a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h5v2z"/></svg>
                 </div>
-                <h3 class="cs-h3">Custom Website Design</h3>
+                <h3 class="cs-h3">{{ home.services.items[0].title }}</h3>
                 <p class="cs-item-text">
-                    Professional, approachable websites designed for clarity, usability, and a strong first impression.
+                    {{ home.services.items[0].body }}
                 </p>
             </li>
             <li class="cs-item">
                 <div class="cs-icon-wrapper">
                     <svg class="cs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 </div>
-                <h3 class="cs-h3">SEO-Focused Copywriting</h3>
+                <h3 class="cs-h3">{{ home.services.items[1].title }}</h3>
                 <p class="cs-item-text">
-                    Clear, search-optimized copy that helps your business get found while sounding natural and trustworthy.
+                    {{ home.services.items[1].body }}
                 </p>
             </li>
             <li class="cs-item">
                 <div class="cs-icon-wrapper">
                     <svg class="cs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 1.45-.39 2.81-1.06 3.98l1.73 1c.83-1.47 1.33-3.15 1.33-4.98 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-1.73-1A7.954 7.954 0 0 1 12 19z"/></svg>
                 </div>
-                <h3 class="cs-h3">Fast, Accessible Websites</h3>
+                <h3 class="cs-h3">{{ home.services.items[2].title }}</h3>
                 <p class="cs-item-text">
-                    Clean code, responsive layouts, and thoughtful design choices that improve usability and speed.
+                    {{ home.services.items[2].body }}
                 </p>
             </li>
         </ul>
-        <a href="/services/" class="cs-button-link">View All Services →</a>
+        <a href="{{ home.services.linkUrl }}" class="cs-button-link">{{ home.services.linkText }} →</a>
     </div>
 </section>
 
@@ -164,9 +167,9 @@
 <section id="home-reviews">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Testimonials</span>
-            <h2 class="cs-title">What Our Clients Say</h2>
-            <p class="cs-text"><a href="https://share.google/efm3rix8NT4m7b3sr" target="_blank" rel="noopener">Real feedback</a> from businesses we've helped grow online.</p>
+            <span class="cs-topper">{{ home.reviews.eyebrow }}</span>
+            <h2 class="cs-title">{{ home.reviews.title }}</h2>
+            <p class="cs-text"><a href="{{ home.reviews.sourceUrl }}" target="_blank" rel="noopener">{{ home.reviews.intro }}</a></p>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
@@ -178,11 +181,11 @@
                     <svg class="cs-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.4 8.165L12 18.896l-7.334 3.86 1.4-8.165L.132 9.21l8.2-1.192z"/></svg>
                 </div>
                 <blockquote class="cs-review">
-                    <p class="cs-review-text">"Blue Canary Web Design completely transformed our online presence. The site is fast, beautiful, and our PageSpeed scores went from frustrating to a perfect 100. Parents find us easily now, and the whole process was seamless."</p>
+                    <p class="cs-review-text">"{{ home.reviews.items[0].quote }}"</p>
                 </blockquote>
                 <div class="cs-info">
-                    <span class="cs-name">District Scholars</span>
-                    <a href="https://www.districtscholars.com" class="cs-company" target="_blank" rel="noopener">www.districtscholars.com</a>
+                    <span class="cs-name">{{ home.reviews.items[0].name }}</span>
+                    <a href="{{ home.reviews.items[0].url }}" class="cs-company" target="_blank" rel="noopener">{{ home.reviews.items[0].siteLabel }}</a>
                 </div>
             </li>
             <li class="cs-item">
@@ -194,11 +197,11 @@
                     <svg class="cs-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.4 8.165L12 18.896l-7.334 3.86 1.4-8.165L.132 9.21l8.2-1.192z"/></svg>
                 </div>
                 <blockquote class="cs-review">
-                    <p class="cs-review-text">"Working with Blue Canary was a breath of fresh air. They understood exactly what my therapy practice needed—a calming, professional website that helps potential clients feel at ease before they even reach out. Highly recommend!"</p>
+                    <p class="cs-review-text">"{{ home.reviews.items[1].quote }}"</p>
                 </blockquote>
                 <div class="cs-info">
-                    <span class="cs-name">Within Reach Therapy</span>
-                    <a href="https://www.withinreachtherapy.com" class="cs-company" target="_blank" rel="noopener">www.withinreachtherapy.com</a>
+                    <span class="cs-name">{{ home.reviews.items[1].name }}</span>
+                    <a href="{{ home.reviews.items[1].url }}" class="cs-company" target="_blank" rel="noopener">{{ home.reviews.items[1].siteLabel }}</a>
                 </div>
             </li>
             <li class="cs-item">
@@ -210,11 +213,11 @@
                     <svg class="cs-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.4 8.165L12 18.896l-7.334 3.86 1.4-8.165L.132 9.21l8.2-1.192z"/></svg>
                 </div>
                 <blockquote class="cs-review">
-                    <p class="cs-review-text">"I couldn't be happier with the new website [Blue Canary Web Design] built for my practice. From our very first conversation, they took the time to understand what I needed and were consistently responsive throughout the entire process.... I highly recommend them to anyone looking for a website designer who is skilled, communicative, and easy to work with."</p>
+                    <p class="cs-review-text">"{{ home.reviews.items[2].quote }}"</p>
                 </blockquote>
                 <div class="cs-info">
-                    <span class="cs-name">Santo Psychotherapy</span>
-                    <a href="https://www.santopsychotherapy.com" class="cs-company" target="_blank" rel="noopener">www.santopsychotherapy.com</a>
+                    <span class="cs-name">{{ home.reviews.items[2].name }}</span>
+                    <a href="{{ home.reviews.items[2].url }}" class="cs-company" target="_blank" rel="noopener">{{ home.reviews.items[2].siteLabel }}</a>
                 </div>
             </li>
         </ul>
@@ -304,9 +307,9 @@
 <section id="home-cta">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Ready to Get Started?</h2>
-            <p class="cs-text">Let's talk about your website and how we can help your business grow.</p>
-            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
+            <h2 class="cs-title">{{ home.cta.title }}</h2>
+            <p class="cs-text">{{ home.cta.body }}</p>
+            <a href="{{ home.cta.buttonUrl }}" class="cs-button-solid" target="_blank" rel="noopener">{{ home.cta.buttonText }}</a>
         </div>
     </div>
 </section>
@@ -319,25 +322,25 @@
         <div class="cs-container">
             <!-- Contact Info -->
             <div class="cs-content">
-                <span class="cs-topper">Contact Us</span>
-                <h2 class="cs-title">Get In Touch</h2>
+                <span class="cs-topper">{{ site.contact.eyebrow }}</span>
+                <h2 class="cs-title">{{ site.contact.title }}</h2>
                 <p class="cs-text">
-                    Not sure where to start? Send us a message and we'll help you decide on the right next step.
+                    {{ site.contact.body }}
                 </p>
                 
                 <!--Email-->
-                <span class="cs-header">Email</span>
-                <a href="mailto:info@bluecanarywebdesign.com" class="cs-link">info@bluecanarywebdesign.com</a>
+                <span class="cs-header">{{ site.contact.emailLabel }}</span>
+                <a href="mailto:{{ site.contact.email }}" class="cs-link">{{ site.contact.email }}</a>
                 <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a href="tel:929-277-8037" class="cs-link">(929) 277-8037</a>
+                <span class="cs-header">{{ site.contact.phoneLabel }}</span>
+                <a href="tel:{{ site.contact.phoneLink }}" class="cs-link">{{ site.contact.phone }}</a>
 
                 <!--Social Buttons-->
                 <div class="cs-social">
-                    <a class="cs-social-link" aria-label="visit linkedin profile" href="https://www.linkedin.com/company/blue-canary-web-design/">
+                    <a class="cs-social-link" aria-label="visit linkedin profile" href="{{ site.contact.linkedin }}">
                         <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="assets/images/linkedin.png" alt="linkedin" width="11" height="11">
                     </a>
-                    <a class="cs-social-link" aria-label="visit google profile" href="https://share.google/g54jvOCG7xpoUDWWv">
+                    <a class="cs-social-link" aria-label="visit google profile" href="{{ site.contact.google }}">
                         <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
                     </a>
                 </div>
@@ -373,7 +376,7 @@
                 </label>
                 <p class="cs-form-success" id="cs-form-490-success" role="status" aria-live="polite" hidden></p>
                 <p class="cs-form-error" id="cs-form-490-error" role="status" aria-live="polite" hidden></p>
-                <button class="cs-button-solid" type="submit">Submit Message Now</button>
+                <button class="cs-button-solid" type="submit">{{ site.contact.submitText }}</button>
             </form>
         </div>
     </section>
@@ -417,19 +420,19 @@
                 </li>
             </ul>
             <a aria-label="go back to home" class="cs-logo" href="/">
-                <img class="cs-logo-img" loading="lazy" decoding="async" src="assets/logos/horiz_rt_fulllogo_transparent_no_buffer_white_text.webp" alt="logo" width="209" height="40">
+                <img class="cs-logo-img" loading="lazy" decoding="async" src="{{ site.footerLogo }}" alt="logo" width="209" height="40">
             </a>
         </div>
         <div class="cs-bottom">
             <!--Social-->
             <ul class="cs-social">
                 <li class="cs-social-li">
-                    <a href="https://www.linkedin.com/company/blue-canary-web-design/" class="cs-social-link" aria-label="linkedin" target="_blank" rel="noopener">
+                    <a href="{{ site.contact.linkedin }}" class="cs-social-link" aria-label="linkedin" target="_blank" rel="noopener">
                         <img class="cs-social-icon cs-default" src="assets/images/linkedin.png" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
                 <li class="cs-social-li">
-                    <a href="https://share.google/g54jvOCG7xpoUDWWv" class="cs-social-link" aria-label="google" target="_blank" rel="noopener">
+                    <a href="{{ site.contact.google }}" class="cs-social-link" aria-label="google" target="_blank" rel="noopener">
                         <img class="cs-social-icon cs-default" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
@@ -437,7 +440,7 @@
 
             <span class="cs-copyright">
                 © Copyright <script>document.write(/\d{4}/.exec(Date())[0])</script>
- - <a href="/" class="cs-copyright-link">Blue Canary Web Design LLC</a>
+ - <a href="/" class="cs-copyright-link">{{ site.name }} LLC</a>
             </span>
         </div>
     </div>

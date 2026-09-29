@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "eyebrow": "Pricing",
+    "title": "Clear, Simple Pricing",
+    "body": "Transparent, fair pricing with no hidden fees. Choose the plan that works for you."
+  },
+  "plans": [
+    {
+      "label": "One-Time Payment",
+      "title": "Lump Sum",
+      "price": "$2,900+",
+      "note": "starting + $35/mo hosting",
+      "features": ["Design & Development", "Up to 5 pages included", "$150 per additional page", "+$250 to add a blog", "+$75/mo unlimited edits add-on"],
+      "buttonText": "Get Started",
+      "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+    },
+    {
+      "label": "Low Upfront Cost",
+      "title": "Monthly",
+      "price": "$1800+",
+      "note": "starting + $170/mo hosting and maintenance",
+      "featured": true,
+      "badge": "Most Popular",
+      "features": ["Design & Development", "Hosting included", "Unlimited edits", "Lifetime updates", "24-month minimum"],
+      "buttonText": "Get Started",
+      "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+    },
+    {
+      "label": "Online Store",
+      "title": "ECommerce",
+      "price": "$7,000+",
+      "note": "starting price",
+      "features": ["Custom Shopify store", "App configuration", "Integrated shipping", "Shopify walkthrough", "+$50/mo unlimited edits"],
+      "buttonText": "Get Started",
+      "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+    }
+  ],
+  "nonprofit": {
+    "eyebrow": "Discounts Available",
+    "title": "Supporting Good Work",
+    "body": "We offer discounted pricing for nonprofits and organizations focused on democracy, equality, and human kindness. If that sounds like you, let us know when you reach out."
+  },
+  "cta": {
+    "title": "Questions About Pricing?",
+    "body": "Every project is different. Schedule a free consultation and we'll give you an honest estimate.",
+    "buttonText": "Schedule a Free Consultation",
+    "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+  }
+}
