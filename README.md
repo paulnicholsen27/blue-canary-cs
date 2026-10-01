@@ -125,12 +125,6 @@ The CMS configuration is in `admin/config.yml`:
 
 When editing a post manually, preserve its frontmatter fields: `title`, `description`, `shareImage`, `date`, and `tags`. The Markdown body follows the frontmatter block.
 
-## Editing pages with Decap CMS
-
-The **Page Content** collection lets editors update the Home, About, Services, Pricing, and Gallery pages without editing templates. **Site Settings** controls the site description, header and footer logos, share image, contact details, and social links. Gallery screenshots and About page imagery can be replaced or uploaded in the media picker; new uploads are stored in `assets/images/uploads`.
-
-Page layouts, navigation labels, the contact form's field structure, legal copy, and structured data remain code-managed. CMS edits use the editorial workflow and are published through the configured branch after approval.
-
 ## Editing the site
 
 - Use the files in `pages/`, `index.html`, and `blog/` for page-level markup.
