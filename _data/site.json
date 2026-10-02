@@ -2,5 +2,20 @@
   "url": "https://www.bluecanarywebdesign.com",
   "name": "Blue Canary Web Design",
   "description": "Fast, accessible websites and SEO-focused copywriting for small businesses.",
-  "defaultShareImage": "/assets/logos/vert_rt_fulllogo.png"
+  "defaultShareImage": "/assets/logos/vert_rt_fulllogo.png",
+  "logo": "/assets/logos/horiz_rt_fulllogo_transparent_nobuffer_sm.webp",
+  "footerLogo": "/assets/logos/horiz_rt_fulllogo_transparent_no_buffer_white_text.webp",
+  "contact": {
+    "eyebrow": "Contact Us",
+    "title": "Contact Information",
+    "body": "Not sure where to start? That's okay. Send us a message and we'll walk through your needs, answer your questions, and help you decide on the right next step.",
+    "email": "info@bluecanarywebdesign.com",
+    "emailLabel": "Email",
+    "phone": "(929) 277-8037",
+    "phoneLink": "929-277-8037",
+    "phoneLabel": "Phone",
+    "linkedin": "https://www.linkedin.com/company/blue-canary-web-design/",
+    "google": "https://share.google/g54jvOCG7xpoUDWWv",
+    "submitText": "Submit Message Now"
+  }
 }

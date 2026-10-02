@@ -12,118 +12,35 @@ permalink: pricing/index.html
 <section id="pricing-hero">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Pricing</span>
-            <h1 class="cs-title">Clear, Simple Pricing</h1>
+            <span class="cs-topper">{{ pricing.hero.eyebrow }}</span>
+            <h1 class="cs-title">{{ pricing.hero.title }}</h1>
             <p class="cs-text">
-                Transparent, fair pricing with no hidden fees. Choose the plan that works for you.
+                {{ pricing.hero.body }}
             </p>
         </div>
     </div>
-</section>
-
+            {% for plan in pricing.plans %}
+            <li class="cs-card{% if plan.featured %} cs-featured{% endif %}">
+                {% if plan.badge %}<span class="cs-badge">{{ plan.badge }}</span>{% endif %}
 <!-- ============================================ -->
-<!--              Pricing Cards                   -->
-<!-- ============================================ -->
+                    <span class="cs-card-label">{{ plan.label }}</span>
+                    <h2 class="cs-card-title">{{ plan.title }}</h2>
 
-<section id="pricing-cards">
-    <div class="cs-container">
+                        <span class="cs-price">{{ plan.price }}</span>
+                        <span class="cs-price-note">{{ plan.note }}</span>
         <ul class="cs-card-list">
             <!-- Lump Sum -->
             <li class="cs-card">
-                <div class="cs-card-header">
+                    {% for feature in plan.features %}
+                    <li class="cs-feature">
                     <span class="cs-card-label">One-Time Payment</span>
-                    <h2 class="cs-card-title">Lump Sum</h2>
-                    <div class="cs-card-price">
-                        <span class="cs-price">$2,900+</span>
-                        <span class="cs-price-note">starting + $35/mo hosting</span>
-                    </div>
-                </div>
-                <ul class="cs-feature-list">
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Design &amp; Development
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Up to 5 pages included
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        {{ feature }}
                         $150 per additional page
+                    {% endfor %}
                     </li>
-                    <li class="cs-feature">
+                <a href="{{ plan.buttonUrl }}" class="cs-card-button" target="_blank" rel="noopener">{{ plan.buttonText }}</a>
                         <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        +$250 to add a blog
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        +$75/mo unlimited edits add-on
-                    </li>
-                </ul>
-                <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-card-button" target="_blank" rel="noopener">Get Started</a>
-            </li>
-            
-            <!-- Monthly -->
-            <li class="cs-card cs-featured">
-                <span class="cs-badge">Most Popular</span>
-                <div class="cs-card-header">
-                    <span class="cs-card-label">Low Upfront Cost</span>
-                    <h2 class="cs-card-title">Monthly</h2>
-                    <div class="cs-card-price">
-                        <span class="cs-price">$1800+</span>
-                        <span class="cs-price-note">starting + $170/mo hosting and maintenance</span>
-                    </div>
-                </div>
-                <ul class="cs-feature-list">
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Design &amp; Development
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Hosting included
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Unlimited edits
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Lifetime updates
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        24-month minimum
-                    </li>
-                </ul>
-                <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-card-button" target="_blank" rel="noopener">Get Started</a>
-            </li>
-            
-            <!-- ECommerce -->
-            <li class="cs-card">
-                <div class="cs-card-header">
-                    <span class="cs-card-label">Online Store</span>
-                    <h2 class="cs-card-title">ECommerce</h2>
-                    <div class="cs-card-price">
-                        <span class="cs-price">$7,000+</span>
-                        <span class="cs-price-note">starting price</span>
-                    </div>
-                </div>
-                <ul class="cs-feature-list">
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Custom Shopify store
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        App configuration
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        Integrated shipping
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            {% endfor %}
                         Shopify walkthrough
                     </li>
                     <li class="cs-feature">
@@ -144,10 +61,10 @@ permalink: pricing/index.html
 <section id="pricing-nonprofit">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Discounts Available</span>
-            <h2 class="cs-title">Supporting Good Work</h2>
+            <span class="cs-topper">{{ pricing.nonprofit.eyebrow }}</span>
+            <h2 class="cs-title">{{ pricing.nonprofit.title }}</h2>
             <p class="cs-text">
-                We offer discounted pricing for nonprofits and organizations focused on democracy, equality, and human kindness. If that sounds like you, let us know when you reach out.
+                {{ pricing.nonprofit.body }}
             </p>
         </div>
     </div>
@@ -160,9 +77,9 @@ permalink: pricing/index.html
 <section id="pricing-cta">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Questions About Pricing?</h2>
-            <p class="cs-text">Every project is different. Schedule a free consultation and we'll give you an honest estimate.</p>
-            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Schedule a Free Consultation</a>
+            <h2 class="cs-title">{{ pricing.cta.title }}</h2>
+            <p class="cs-text">{{ pricing.cta.body }}</p>
+            <a href="{{ pricing.cta.buttonUrl }}" class="cs-button-solid" target="_blank" rel="noopener">{{ pricing.cta.buttonText }}</a>
         </div>
     </div>
 </section>

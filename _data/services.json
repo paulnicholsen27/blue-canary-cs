@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "eyebrow": "What We Do",
+    "title": "Web Design Services for Small Businesses",
+    "body": "We build websites that work: clear, fast, and designed to help your business grow with thoughtful design and honest communication."
+  },
+  "items": [
+    { "title": "Custom Website Design", "body": "Your website should feel like you—professional, approachable, and easy to navigate. We create custom designs that prioritize clarity and help visitors understand what you do within seconds." },
+    { "title": "SEO-Focused Copywriting", "body": "Good copy helps people find you and trust you. We write clear, search-optimized content that ranks well on Google while still sounding natural, not stuffed with keywords or corporate speak." },
+    { "title": "Fast, Accessible Websites", "body": "Speed matters. So does accessibility. Every site we build loads quickly, works on any device, and follows best practices so everyone can use it regardless of how they browse the web." }
+  ],
+  "benefits": {
+    "eyebrow": "Why Blue Canary",
+    "title": "What Makes Us Different",
+    "items": [
+      { "title": "Hand-Crafted Code", "body": "Every site is customized to fit your specific business and goals—no drag-and-drop page builders or bloated plugins." },
+      { "title": "Transparent Pricing", "body": "You'll know exactly what you're paying for upfront. No surprise fees, no scope creep—just honest numbers." },
+      { "title": "You Own Your Site", "body": "Your website belongs to you. No lock-in contracts, no proprietary systems you can't take elsewhere." },
+      { "title": "Real Human Support", "body": "When you have a question, you get a direct answer—not a ticket number. We're a small team and we stay responsive." }
+    ]
+  },
+  "process": {
+    "eyebrow": "Our Process",
+    "title": "How We Work Together",
+    "body": "A simple, collaborative process designed to get your site live without unnecessary complexity.",
+    "steps": [
+      { "title": "Discovery Call", "body": "We start with a free consultation to understand your business, your goals, and what you need from your website." },
+      { "title": "Proposal & Agreement", "body": "You'll receive a clear proposal with scope, timeline, and pricing. We want you to know exactly what to expect and when." },
+      { "title": "Design & Build", "body": "We design and develop your site with regular check-ins. You'll see progress throughout and can give feedback at every stage." },
+      { "title": "Launch & Support", "body": "Once approved, we launch your site and make sure everything is running smoothly. We're here for ongoing support as needed." }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "body": "Schedule a free consultation to talk through your project. We will have an honest conversation about what your website needs, and give you real feedback you can use.",
+    "buttonText": "Schedule a Free Consultation",
+    "buttonUrl": "https://calendly.com/bluecanarywebdesign/initialconsult"
+  }
+}

@@ -5,158 +5,42 @@ description: See recent website projects from Blue Canary Web Design, including 
 permalink: gallery/index.html
 ---
 
-<!-- ============================================ -->
-<!--                Gallery Hero                  -->
-<!-- ============================================ -->
-
 <section id="gallery-hero">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Our Work</span>
-            <h1 class="cs-title">Recent Projects</h1>
-            <p class="cs-text">
-                See what we've built for small businesses, therapy practices, and mission-driven organizations.
-            </p>
+            <span class="cs-topper">{{ gallery.hero.eyebrow }}</span>
+            <h1 class="cs-title">{{ gallery.hero.title }}</h1>
+            <p class="cs-text">{{ gallery.hero.body }}</p>
         </div>
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                Gallery Grid                  -->
-<!-- ============================================ -->
-
 <section id="gallery-grid">
     <div class="cs-container">
         <ul class="cs-gallery-list">
+            {% for project in gallery.projects %}
             <li class="cs-gallery-item">
-                <a class="cs-gallery-link" href="https://www.districtscholars.com" target="_blank" rel="noopener">
+                <a class="cs-gallery-link" href="{{ project.url }}" target="_blank" rel="noopener">
                     <picture class="cs-gallery-picture">
-                       <!--Mobile Image-->
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 111, height: 222 }) | avif" type="image/avif">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 111, height: 222 }) | webp" type="image/webp">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 111, height: 222 }) | jpeg" type="image/jpeg">
-                       <!--Tablet Image-->
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 333, height: 444 }) | avif" type="image/avif">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 333, height: 444 }) | webp" type="image/webp">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 333, height: 444 }) | jpeg" type="image/jpeg">
-                       <!--Desktop Image-->
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 600, height: 400 }) | avif" type="image/avif">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 600, height: 400 }) | webp" type="image/webp">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/districtscholars.png" | resize({ width: 600, height: 400 }) | jpeg" type="image/jpeg">
-                       <img class="cs-gallery-img" src="/assets/images/gallery/districtscholars.png" | resize({ width: 600, height: 400 }) | jpeg" alt="screenshot of districtscholars.com" width="600" height="400" loading="lazy" decoding="async" aria-hidden="true">
+                        <img class="cs-gallery-img" src="{{ project.image }}" alt="{{ project.alt }}" width="600" height="400" loading="lazy" decoding="async">
                     </picture>
                     <div class="cs-gallery-info">
-                        <h2 class="cs-gallery-title">District Scholars</h2>
-                        <p class="cs-gallery-desc">Tutoring service for K-12 students</p>
+                        <h2 class="cs-gallery-title">{{ project.title }}</h2>
+                        <p class="cs-gallery-desc">{{ project.body }}</p>
                     </div>
                 </a>
             </li>
-            <li class="cs-gallery-item">
-                <a class="cs-gallery-link" href="https://santopsychotherapy.com/" target="_blank" rel="noopener">
-                    <picture class="cs-gallery-picture">
-                       <!--Mobile Image-->
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 111, height: 222 }) | avif" type="image/avif">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 111, height: 222 }) | webp" type="image/webp">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 111, height: 222 }) | jpeg" type="image/jpeg">
-                       <!--Tablet Image-->
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 333, height: 444 }) | avif" type="image/avif">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 333, height: 444 }) | webp" type="image/webp">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 333, height: 444 }) | jpeg" type="image/jpeg">
-                       <!--Desktop Image-->
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 600, height: 400 }) | avif" type="image/avif">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 600, height: 400 }) | webp" type="image/webp">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 600, height: 400 }) | jpeg" type="image/jpeg">
-                       <img class="cs-gallery-img" src="/assets/images/gallery/santopsychotherapy.png" | resize({ width: 600, height: 400 }) | jpeg" alt="screenshot of santopsychotherapy.com" width="600" height="400" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <div class="cs-gallery-info">
-                        <h2 class="cs-gallery-title">Santo Psychotherapy</h2>
-                        <p class="cs-gallery-desc">Private therapy practice</p>
-                    </div>
-                </a>
-            </li>
-            <li class="cs-gallery-item">
-                <a class="cs-gallery-link" href="https://www.withinreachtherapy.com/" target="_blank" rel="noopener">
-                    <picture class="cs-gallery-picture">
-                       <!--Mobile Image-->
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 111, height: 222 }) | avif" type="image/avif">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 111, height: 222 }) | webp" type="image/webp">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 111, height: 222 }) | jpeg" type="image/jpeg">
-                       <!--Tablet Image-->
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 333, height: 444 }) | avif" type="image/avif">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 333, height: 444 }) | webp" type="image/webp">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 333, height: 444 }) | jpeg" type="image/jpeg">
-                       <!--Desktop Image-->
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 600, height: 400 }) | avif" type="image/avif">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 600, height: 400 }) | webp" type="image/webp">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/withinreach.png" | resize({ width: 600, height: 400 }) | jpeg" type="image/jpeg">
-                       <img class="cs-gallery-img" src="/assets/images/gallery/withinreach.png" | resize({ width: 600, height: 400 }) | jpeg" alt="screenshot of withinreachtherapy.com" width="600" height="400" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <div class="cs-gallery-info">
-                        <h2 class="cs-gallery-title">Within Reach Therapy</h2>
-                        <p class="cs-gallery-desc">Mental health counseling services</p>
-                    </div>
-                </a>
-            </li>
-            <li class="cs-gallery-item">
-                <a class="cs-gallery-link" href="https://paulnicholsen.com" target="_blank" rel="noopener">
-                    <picture class="cs-gallery-picture">
-                       <!--Mobile Image-->
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 111, height: 222 }) | avif" type="image/avif">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 111, height: 222 }) | webp" type="image/webp">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 111, height: 222 }) | jpeg" type="image/jpeg">
-                       <!--Tablet Image-->
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 333, height: 444 }) | avif" type="image/avif">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 333, height: 444 }) | webp %}" type="image/webp">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 333, height: 444 }) | jpeg %}" type="image/jpeg">
-                       <!--Desktop Image-->
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/paulnicholsen.png" | resize({ width: 600, height: 400 }) | jpeg %}" type="image/jpeg">
-                       <img class="cs-gallery-img" src="/assets/images/gallery/paulnicholsen.png" | resize({ width: 600, height: 400 }) | jpeg %}" alt="screenshot of paulnicholsen.com" width="600" height="400" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <div class="cs-gallery-info">
-                        <h2 class="cs-gallery-title">Paul Nicholsen</h2>
-                        <p class="cs-gallery-desc">Personal portfolio site</p>
-                    </div>
-                </a>
-            </li>
-            <li class="cs-gallery-item">
-                <a class="cs-gallery-link" href="https://www.dragonquillbooks.com" target="_blank" rel="noopener">
-                    <picture class="cs-gallery-picture">
-                       <!--Mobile Image-->
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 111, height: 222 }) | avif %}" type="image/avif">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 111, height: 222 }) | webp %}" type="image/webp">
-                       <source media="(max-width: 600px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 111, height: 222 }) | jpeg %}" type="image/jpeg">
-                       <!--Tablet Image-->
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 333, height: 444 }) | avif %}" type="image/avif">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 333, height: 444 }) | webp %}" type="image/webp">
-                       <source media="(max-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 333, height: 444 }) | jpeg %}" type="image/jpeg">
-                       <!--Desktop Image-->
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
-                       <source media="(min-width: 1024px)" srcset="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | jpeg %}" type="image/jpeg">
-                       <img class="cs-gallery-img" src="/assets/images/gallery/dragonquill.png" | resize({ width: 600, height: 400 }) | jpeg %}" alt="screenshot of dragonquillbooks.com" width="600" height="400" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <div class="cs-gallery-info">
-                        <h2 class="cs-gallery-title">Dragon Quill Books</h2>
-                        <p class="cs-gallery-desc">Independent bookstore</p>
-                    </div>
-                </a>
-            </li>
+            {% endfor %}
         </ul>
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                Gallery CTA                   -->
-<!-- ============================================ -->
-
 <section id="gallery-cta">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Ready to Join the Gallery?</h2>
-            <p class="cs-text">Let's talk about your project and create something you'll be proud of.</p>
-            <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-button-solid" target="_blank" rel="noopener">Start Your Project</a>
+            <h2 class="cs-title">{{ gallery.cta.title }}</h2>
+            <p class="cs-text">{{ gallery.cta.body }}</p>
+            <a href="{{ gallery.cta.buttonUrl }}" class="cs-button-solid" target="_blank" rel="noopener">{{ gallery.cta.buttonText }}</a>
         </div>
     </div>
 </section>
