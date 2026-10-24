@@ -26,6 +26,7 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
 }
 
 /* Mobile readability: increase text sizes without changing rem-based layout math */
@@ -135,7 +136,7 @@ body {
     font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
-    max-width: 43.75rem;
+    max-width: 65rem;
     margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
@@ -162,3 +163,8 @@ body {
   font-weight: 700;
 }
                                 
+@media only screen and (min-width: 0rem) {
+    .cs-container {
+        padding-top: 50px;
+    }
+}
