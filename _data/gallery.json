@@ -9,7 +9,7 @@
     { "title": "Santo Psychotherapy", "body": "Private therapy practice", "url": "https://santopsychotherapy.com/", "image": "/assets/images/gallery/santopsychotherapy.png", "alt": "screenshot of santopsychotherapy.com" },
     { "title": "Within Reach Therapy", "body": "Mental health counseling services", "url": "https://www.withinreachtherapy.com/", "image": "/assets/images/gallery/withinreach.png", "alt": "screenshot of withinreachtherapy.com" },
     { "title": "Paul Nicholsen", "body": "Personal portfolio site", "url": "https://paulnicholsen.com", "image": "/assets/images/gallery/paulnicholsen.png", "alt": "screenshot of paulnicholsen.com" },
-    { "title": "Dragon Quill Books", "body": "Independent bookstore", "url": "https://www.dragonquillbooks.com", "image": "/assets/images/gallery/dragonquill.png", "alt": "screenshot of dragonquillbooks.com" }
+    { "title": "Dragon Quill Books", "body": "Independent bookstore", "url": "https://dragonquillbooks.netlify.app/", "image": "/assets/images/gallery/dragonquill.png", "alt": "screenshot of dragonquillbooks.com" }
   ],
   "cta": {
     "title": "Ready to Join the Gallery?",
