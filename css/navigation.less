@@ -401,7 +401,8 @@
         .cs-dropdown {
             position: relative;
             color: var(--bodyTextColorWhite);
-            &.cs-active {
+            &.cs-active,
+            &:focus-within {
                 .cs-drop-ul {
                     height: auto;
                     opacity: 1;
@@ -419,6 +420,15 @@
                 position: relative;
                 transition: opacity .3s;
             }
+        }
+
+        .cs-dropdown-toggle {
+            width: 100%;
+            border: 0;
+            padding: 0;
+            background: transparent;
+            font-family: inherit;
+            cursor: pointer;
         }
 
         .cs-drop-icon {
@@ -466,7 +476,9 @@
     #cs-navigation {
         .cs-dropdown {
             position: relative;
-            &:hover {
+            &:hover,
+            &:focus-within,
+            &.cs-active {
                 cursor: pointer;
                 .cs-drop-ul {
                     transform: scaleY(1);
@@ -486,6 +498,14 @@
             height: auto;
             margin-left: (4/16rem);
             display: inline-block;
+        }
+
+        .cs-dropdown-toggle {
+            border: 0;
+            padding: 0;
+            background: transparent;
+            font-family: inherit;
+            cursor: pointer;
         }
 
         .cs-drop-ul {

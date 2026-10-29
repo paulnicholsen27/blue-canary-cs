@@ -1,0 +1,207 @@
+/*-- -------------------------- -->
+<--- Therapist Web Design Page -->
+<--- -------------------------- -*/
+
+.page-therapy {
+    .cs-page-section {
+        padding: 0;
+    }
+
+    .cs-page-section > .cs-container {
+        max-width: none;
+        padding: 0;
+    }
+}
+
+#therapist-hero,
+#therapist-cta {
+    padding: clamp(5rem, 12vw, 8rem) 1rem;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--headerColor) 100%);
+    text-align: center;
+
+    .cs-container {
+        max-width: 56.25rem;
+        margin: 0 auto;
+    }
+
+    .cs-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cs-topper {
+        margin: 0 0 .75rem;
+        color: var(--primary);
+        letter-spacing: .15em;
+    }
+
+    .cs-title {
+        margin: 0 0 1.5rem;
+        color: #fff;
+    }
+
+    .cs-text {
+        max-width: 43.75rem;
+        margin: 0 0 2rem;
+        color: rgba(255, 255, 255, .92);
+        line-height: 1.7;
+    }
+
+    .cs-button-solid {
+        display: inline-block;
+        padding: 0 2rem;
+        border-radius: .375rem;
+        background: #fff;
+        color: var(--headerColor);
+        font-weight: 700;
+        line-height: 3.5rem;
+        text-decoration: none;
+        transition: background-color .3s, transform .3s;
+
+        &:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+#therapist-hero {
+    padding-top: clamp(9rem, 16vw, 12rem);
+}
+
+#therapist-needs,
+#therapist-work {
+    padding: var(--sectionPadding);
+    background: #fff;
+
+    .cs-container {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .cs-content {
+        max-width: 48rem;
+        margin: 0 auto 2.5rem;
+        text-align: center;
+    }
+
+    .cs-title {
+        margin-bottom: 1rem;
+    }
+
+    .cs-text {
+        max-width: none;
+        line-height: 1.7;
+    }
+}
+
+.cs-therapist-list,
+.cs-therapist-projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: clamp(1.5rem, 4vw, 2rem);
+        border: 1px solid var(--primaryLight);
+        border-radius: .75rem;
+        background: var(--tertiaryLight);
+    }
+
+    h3 {
+        margin: 0 0 .75rem;
+        color: var(--headerColor);
+        font-size: 1.2rem;
+        line-height: 1.35;
+    }
+
+    p {
+        margin: 0;
+        color: var(--bodyTextColor);
+        line-height: 1.7;
+    }
+}
+
+#therapist-hipaa {
+    padding: var(--sectionPadding);
+    background: var(--tertiaryLight);
+
+    .cs-container {
+        max-width: 52rem;
+        margin: 0 auto;
+    }
+
+    .cs-content {
+        padding: clamp(1.5rem, 5vw, 3rem);
+        border-left: .3rem solid var(--secondary);
+        background: #fff;
+    }
+
+    .cs-title {
+        margin-bottom: 1.25rem;
+    }
+
+    .cs-text {
+        max-width: none;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#therapist-work {
+    background: var(--tertiaryLight);
+
+    .cs-therapist-projects {
+        li {
+            padding: 0;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        a {
+            display: block;
+            padding: 1.5rem;
+            color: var(--secondary);
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            display: block;
+            margin-top: .5rem;
+            color: var(--bodyTextColor);
+            font-size: .95rem;
+            font-weight: 400;
+        }
+    }
+}
+
+#therapist-cta {
+    .cs-container {
+        max-width: 50rem;
+    }
+
+    .cs-title {
+        font-size: clamp(1.9rem, 4vw, 2.75rem);
+    }
+}
+
+@media only screen and (max-width: 40rem) {
+    .cs-therapist-list,
+    .cs-therapist-projects {
+        grid-template-columns: 1fr;
+    }
+}

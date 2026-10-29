@@ -3,6 +3,7 @@ var CSbody = document.querySelector("body");
 const CSnavbarMenu = document.querySelector("#cs-navigation");
 const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
 const CSnavLinks = document.querySelectorAll("#cs-navigation .cs-ul-wrapper .cs-ul a");
+const dropdownToggles = document.querySelectorAll("#cs-navigation .cs-dropdown-toggle");
 
 CShamburgerMenu.addEventListener('click', function () {
     CShamburgerMenu.classList.toggle("cs-active");
@@ -12,9 +13,17 @@ CShamburgerMenu.addEventListener('click', function () {
     ariaExpanded();
 });
 
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const dropdown = toggle.closest(".cs-dropdown");
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isExpanded));
+        dropdown.classList.toggle("cs-active", !isExpanded);
+    });
+});
+
 CSnavLinks.forEach(link => {
     link.addEventListener('click', function () {
-        console.log(link);
         CShamburgerMenu.classList.remove("cs-active");
         CSnavbarMenu.classList.remove("cs-active");
         CSbody.classList.remove("cs-open");

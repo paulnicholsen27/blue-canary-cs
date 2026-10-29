@@ -73,8 +73,15 @@ templateEngineOverride: njk
                     <li class="cs-li">
                         <a href="/" class="cs-li-link cs-active">Home</a>
                     </li>
-                    <li class="cs-li">
-                        <a href="/services/" class="cs-li-link">Services</a>
+                    <li class="cs-li cs-dropdown">
+                        <button type="button" class="cs-li-link cs-dropdown-toggle" aria-expanded="false" aria-controls="services-dropdown">
+                            Services
+                            <svg class="cs-drop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="m3.2 5.7 4.8 4.6 4.8-4.6 1.1 1.1L8 12.5 2.1 6.8z"/></svg>
+                        </button>
+                        <ul id="services-dropdown" class="cs-drop-ul">
+                            <li class="cs-drop-li"><a href="/services/" class="cs-li-link cs-drop-link">Small Businesses</a></li>
+                            <li class="cs-drop-li"><a href="/therapy" class="cs-li-link cs-drop-link">Therapy Practices</a></li>
+                        </ul>
                     </li>
                     <li class="cs-li">
                         <a href="/about/" class="cs-li-link">About</a>
@@ -398,7 +405,10 @@ templateEngineOverride: njk
                     <a href="/" class="cs-link">Home</a>
                 </li>
                 <li class="cs-li">
-                    <a href="/services/" class="cs-link">Services</a>
+                    <a href="/services/" class="cs-link">Small Businesses</a>
+                </li>
+                <li class="cs-li">
+                    <a href="/therapy" class="cs-link">Therapy Practices</a>
                 </li>
                 <li class="cs-li">
                     <a href="/about/" class="cs-link">About</a>

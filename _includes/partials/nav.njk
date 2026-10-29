@@ -17,7 +17,16 @@
       <div class="cs-ul-wrapper">
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
           <li class="cs-li"><a href="/" class="cs-li-link{% if page.url == '/' %} cs-active{% endif %}">Home</a></li>
-          <li class="cs-li"><a href="/services/" class="cs-li-link{% if page.url == '/services/' %} cs-active{% endif %}">Services</a></li>
+          <li class="cs-li cs-dropdown">
+            <button type="button" class="cs-li-link cs-dropdown-toggle{% if page.url == '/services/' or page.url == '/therapy/' %} cs-active{% endif %}" aria-expanded="false" aria-controls="services-dropdown">
+              Services
+              <svg class="cs-drop-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="m3.2 5.7 4.8 4.6 4.8-4.6 1.1 1.1L8 12.5 2.1 6.8z"/></svg>
+            </button>
+            <ul id="services-dropdown" class="cs-drop-ul">
+              <li class="cs-drop-li"><a href="/services/" class="cs-li-link cs-drop-link{% if page.url == '/services/' %} cs-active{% endif %}">Small Businesses</a></li>
+              <li class="cs-drop-li"><a href="/therapy" class="cs-li-link cs-drop-link{% if page.url == '/therapy/' %} cs-active{% endif %}">Therapy Practices</a></li>
+            </ul>
+          </li>
           <li class="cs-li"><a href="/about/" class="cs-li-link{% if page.url == '/about/' %} cs-active{% endif %}">About</a></li>
           <li class="cs-li"><a href="/gallery/" class="cs-li-link{% if page.url == '/gallery/' %} cs-active{% endif %}">Gallery</a></li>
           <li class="cs-li"><a href="/blog/" class="cs-li-link{% if '/blog/' in page.url %} cs-active{% endif %}">Blog</a></li>
