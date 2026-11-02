@@ -19,37 +19,37 @@ permalink: pricing/index.html
             </p>
         </div>
     </div>
-            {% for plan in pricing.plans %}
-            <li class="cs-card{% if plan.featured %} cs-featured{% endif %}">
-                {% if plan.badge %}<span class="cs-badge">{{ plan.badge }}</span>{% endif %}
-<!-- ============================================ -->
-                    <span class="cs-card-label">{{ plan.label }}</span>
-                    <h2 class="cs-card-title">{{ plan.title }}</h2>
+</section>
 
-                        <span class="cs-price">{{ plan.price }}</span>
-                        <span class="cs-price-note">{{ plan.note }}</span>
+<!-- ============================================ -->
+<!--                Pricing Cards                 -->
+<!-- ============================================ -->
+
+<section id="pricing-cards">
+    <div class="cs-container">
         <ul class="cs-card-list">
-            <!-- Lump Sum -->
-            <li class="cs-card">
-                    {% for feature in plan.features %}
-                    <li class="cs-feature">
-                    <span class="cs-card-label">One-Time Payment</span>
-                        {{ feature }}
-                        $150 per additional page
-                    {% endfor %}
-                    </li>
-                <a href="{{ plan.buttonUrl }}" class="cs-card-button" target="_blank" rel="noopener">{{ plan.buttonText }}</a>
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            {% endfor %}
-                        Shopify walkthrough
-                    </li>
-                    <li class="cs-feature">
-                        <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        +$50/mo unlimited edits
-                    </li>
-                </ul>
-                <a href="https://calendly.com/bluecanarywebdesign/initialconsult" class="cs-card-button" target="_blank" rel="noopener">Get Started</a>
-            </li>
+        {% for plan in pricing.plans %}
+        <li class="cs-card{% if plan.featured %} cs-featured{% endif %}">
+            {% if plan.badge %}<span class="cs-badge">{{ plan.badge }}</span>{% endif %}
+            <div class="cs-card-header">
+                <span class="cs-card-label">{{ plan.label }}</span>
+                <h2 class="cs-card-title">{{ plan.title }}</h2>
+                <div class="cs-card-price">
+                    <span class="cs-price">{{ plan.price }}</span>
+                    <span class="cs-price-note">{{ plan.note }}</span>
+                </div>
+            </div>
+            <ul class="cs-feature-list">
+                {% for feature in plan.features %}
+                <li class="cs-feature">
+                    <svg class="cs-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    {{ feature }}
+                </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ plan.buttonUrl }}" class="cs-card-button" target="_blank" rel="noopener">{{ plan.buttonText }}</a>
+        </li>
+        {% endfor %}
         </ul>
     </div>
 </section>

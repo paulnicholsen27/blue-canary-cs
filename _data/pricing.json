@@ -8,7 +8,7 @@
     {
       "label": "One-Time Payment",
       "title": "Lump Sum",
-      "price": "$2,900+",
+      "price": "$2,400+",
       "note": "starting + $35/mo hosting",
       "features": ["Design & Development", "Up to 5 pages included", "$150 per additional page", "+$250 to add a blog", "+$75/mo unlimited edits add-on"],
       "buttonText": "Get Started",
@@ -17,8 +17,8 @@
     {
       "label": "Low Upfront Cost",
       "title": "Monthly",
-      "price": "$1800+",
-      "note": "starting + $170/mo hosting and maintenance",
+      "price": "$1400+",
+      "note": "starting + $140/mo hosting and maintenance",
       "featured": true,
       "badge": "Most Popular",
       "features": ["Design & Development", "Hosting included", "Unlimited edits", "Lifetime updates", "24-month minimum"],
